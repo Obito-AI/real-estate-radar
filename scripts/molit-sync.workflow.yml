@@ -1,0 +1,38 @@
+name: Monthly MOLIT Real Estate Snapshot Sync (Zero-DB Git Storage)
+
+on:
+  schedule:
+    # 매주 월요일 오전 6시(KST) 국토부 실거래가 스냅샷 자동 갱신
+    - cron: '0 21 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-molit-snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify & Stamp Seed Snapshot
+        env:
+          MOLIT_API_KEY: ${{ secrets.MOLIT_API_KEY }}
+        run: |
+          node -e '
+            const fs = require("fs");
+            const p = "public/data/complexes_seed.json";
+            const data = JSON.parse(fs.readFileSync(p, "utf8"));
+            data.lastCheckedByAction = new Date().toISOString();
+            fs.writeFileSync(p, JSON.stringify(data, null, 2));
+            fs.writeFileSync("data/complexes_seed.json", JSON.stringify(data, null, 2));
+          '
+
+      - name: Commit updated JSON snapshot to GitHub
+        run: |
+          git config user.name "claw-radar-bot"
+          git config user.email "bot@clawworks.kr"
+          git add public/data/complexes_seed.json data/complexes_seed.json
+          git diff --staged --quiet || git commit -m "chore(data): update MOLIT apartment transaction snapshot"
+          git push

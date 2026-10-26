@@ -1,0 +1,7 @@
+{
+  "name": "real-estate-radar",
+  "version": "1.0.0",
+  "private": true,
+  "description": "클로우웍스 부동산 인텔리전스 · Real Estate Radar v1.0 (Zero-Supabase GitHub + Vercel Architecture)",
+  "type": "module"
+}
