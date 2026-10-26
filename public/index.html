@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>부동산 투자 · 시세 · 입지 분석 대시보드 | Real Estate Radar v1.0</title>
+  <title>부동산 투자 · 시세 · 입지 · 경매 분석 대시보드 | Real Estate Radar v2.0</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -22,8 +22,11 @@
       --sage-border: #B7D1C3;
       --navy: #334E68;
       --navy-light: #EBF0F5;
-      --amber: #B4690E;
-      --amber-light: #FDF4E7;
+      --amber: #B45309;
+      --amber-light: #FEF3C7;
+      --amber-border: #F59E0B;
+      --terracotta: #9A3412;
+      --terracotta-light: #FFEDD5;
       --rose: #A8383B;
       --rose-light: #FBECEC;
       --shadow: 0 2px 8px rgba(30, 36, 43, 0.05);
@@ -59,11 +62,16 @@
       font-weight: 800; font-size: 16px; letter-spacing: -0.5px;
     }
     .brand-title { font-size: 16px; font-weight: 800; color: var(--text); letter-spacing: -0.3px; }
-    .brand-sub { font-size: 11.5px; color: var(--text-sub); display: flex; align-items: center; gap: 8px; margin-top: 2px; }
+    .brand-sub { font-size: 11.5px; color: var(--text-sub); display: flex; align-items: center; gap: 8px; margin-top: 2px; flex-wrap: wrap; }
     .arch-badge {
       background: var(--sage-light); color: var(--sage);
       border: 1px solid var(--sage-border);
       padding: 1px 7px; border-radius: 99px; font-size: 10.5px; font-weight: 700;
+    }
+    .auc-top-badge {
+      background: var(--terracotta-light); color: var(--terracotta);
+      border: 1px solid #FDBA74;
+      padding: 1px 7px; border-radius: 99px; font-size: 10.5px; font-weight: 800;
     }
     .header-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
     .btn {
@@ -85,7 +93,8 @@
     .btn-sage:hover { background: #234735; color: #fff; }
     .btn-navy { background: var(--navy); color: #fff; border-color: var(--navy); }
     .btn-navy:hover { background: #263B4F; color: #fff; }
-    .btn-amber { background: var(--amber-light); color: var(--amber); border-color: #E6C79C; }
+    .btn-amber { background: var(--terracotta-light); color: var(--terracotta); border-color: #FDBA74; font-weight: 700; }
+    .btn-amber:hover { background: #FED7AA; }
 
     /* KPI Strip + Filter Bar */
     .control-strip {
@@ -113,10 +122,11 @@
     }
     .kpi-label { font-size: 11px; color: var(--text-sub); font-weight: 600; }
     .kpi-val { font-size: 19px; font-weight: 800; color: var(--text); margin-top: 3px; letter-spacing: -0.4px; }
-    .kpi-foot { font-size: 11px; color: var(--text-muted); margin-top: 3px; display: flex; align-items: center; gap: 5px; }
+    .kpi-foot { font-size: 11px; color: var(--text-muted); margin-top: 3px; display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
     .pill-sage { color: var(--sage); background: var(--sage-light); padding: 1px 6px; border-radius: 4px; font-weight: 700; }
     .pill-navy { color: var(--navy); background: var(--navy-light); padding: 1px 6px; border-radius: 4px; font-weight: 700; }
-    .pill-amber { color: var(--amber); background: var(--amber-light); padding: 1px 6px; border-radius: 4px; font-weight: 700; }
+    .pill-amber { color: var(--terracotta); background: var(--terracotta-light); padding: 1px 6px; border-radius: 4px; font-weight: 700; }
+    .pill-rose { color: var(--rose); background: var(--rose-light); padding: 1px 6px; border-radius: 4px; font-weight: 700; }
 
     .filter-bar {
       background: var(--card);
@@ -164,6 +174,12 @@
       font-weight: 800;
       box-shadow: 0 1px 3px rgba(0,0,0,0.08);
     }
+    .seg-btn.active-amber {
+      background: var(--terracotta);
+      color: #fff;
+      font-weight: 800;
+      box-shadow: 0 1px 3px rgba(154, 52, 18, 0.25);
+    }
     .range-wrap { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--navy); }
     input[type="range"] { accent-color: var(--sage); cursor: pointer; width: 95px; }
 
@@ -173,7 +189,7 @@
       margin: 12px auto 28px;
       padding: 0 18px;
       display: grid;
-      grid-template-columns: 1.18fr 1fr;
+      grid-template-columns: 1.22fr 1fr;
       gap: 14px;
       align-items: start;
     }
@@ -193,13 +209,14 @@
       justify-content: space-between;
       gap: 10px;
       background: #FAF8F3;
+      flex-wrap: wrap;
     }
     .panel-title { font-size: 13.5px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 7px; }
     .panel-sub { font-size: 11.5px; color: var(--text-sub); }
     .panel-body { padding: 14px 15px; }
 
     /* Map Container & Custom Speech Bubble Markers */
-    #radarMap { width: 100%; height: 390px; background: #EAE6DF; z-index: 1; }
+    #radarMap { width: 100%; height: 370px; background: #EAE6DF; z-index: 1; }
     .map-toolbar {
       padding: 9px 14px;
       background: var(--card);
@@ -219,7 +236,7 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.18);
       white-space: nowrap;
       font-family: 'Pretendard', sans-serif;
-      line-height: 1.25;
+      line-height: 1.22;
       transition: transform 0.12s;
     }
     .apt-marker-bubble.selected {
@@ -230,33 +247,119 @@
       z-index: 999 !important;
     }
     .apt-marker-bubble.undervalued { border-color: var(--sage); }
+    .apt-marker-bubble.has-auction { border-color: #D97706; }
     .apt-marker-name { font-size: 10.5px; font-weight: 700; color: var(--text-sub); }
     .apt-marker-bubble.selected .apt-marker-name { color: #E2F2EA; }
-    .apt-marker-price { font-size: 12px; font-weight: 800; color: var(--text); }
+    .apt-marker-price { font-size: 11.5px; font-weight: 800; color: var(--text); }
     .apt-marker-bubble.selected .apt-marker-price { color: #fff; }
     .apt-marker-gap { font-size: 10px; font-weight: 700; color: var(--sage); margin-left: 3px; }
     .apt-marker-bubble.selected .apt-marker-gap { color: #FFE5A3; }
+    .apt-marker-auction-pill {
+      margin-top: 2px;
+      background: #FFF7ED;
+      border: 1px solid #EA580C;
+      color: #9A3412;
+      font-size: 9.5px;
+      font-weight: 800;
+      padding: 1px 5px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .apt-marker-bubble.selected .apt-marker-auction-pill {
+      background: #FEF3C7;
+      color: #9A3412;
+      border-color: #F59E0B;
+    }
 
-    /* Gap Scanner Table */
-    .table-wrap { max-height: 410px; overflow-y: auto; }
-    table.scanner-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    /* Mode Switcher Bar for Scanner */
+    .scanner-mode-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 15px;
+      background: #FAF8F3;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .mode-switch-tabs {
+      display: inline-flex;
+      background: #EAE5DC;
+      padding: 3px;
+      border-radius: 9px;
+      gap: 4px;
+    }
+    .mode-tab-btn {
+      border: none;
+      background: transparent;
+      padding: 7px 13px;
+      border-radius: 7px;
+      font-size: 12.5px;
+      font-weight: 800;
+      color: var(--text-sub);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .mode-tab-btn.active-normal {
+      background: var(--card);
+      color: var(--sage);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .mode-tab-btn.active-auction {
+      background: var(--terracotta);
+      color: #fff;
+      box-shadow: 0 2px 6px rgba(154, 52, 18, 0.25);
+    }
+
+    /* Auction Filter Sub-bar */
+    .auction-filter-bar {
+      padding: 9px 14px;
+      background: #FFFBF5;
+      border-bottom: 1px solid #F3E5D0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .court-chip {
+      border: 1px solid #E5D3B8;
+      background: #FFFDF9;
+      color: var(--text-sub);
+      padding: 4px 9px;
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .court-chip.active {
+      background: var(--terracotta);
+      color: #fff;
+      border-color: var(--terracotta);
+    }
+
+    /* Gap & Auction Scanner Tables */
+    .table-wrap { max-height: 430px; overflow-y: auto; }
+    table.scanner-table { width: 100%; border-collapse: collapse; font-size: 11.8px; }
     table.scanner-table th {
       position: sticky; top: 0; z-index: 5;
       background: #F4F1EA; color: var(--text-sub);
       font-weight: 700; font-size: 11px;
-      padding: 8px 9px; text-align: right;
+      padding: 8px 8px; text-align: right;
       border-bottom: 1px solid var(--border-strong);
       cursor: pointer; user-select: none; white-space: nowrap;
     }
     table.scanner-table th:first-child, table.scanner-table td:first-child { text-align: left; }
     table.scanner-table td {
-      padding: 8px 9px; text-align: right;
+      padding: 8px 8px; text-align: right;
       border-bottom: 1px solid var(--border);
       white-space: nowrap;
+      vertical-align: middle;
     }
     table.scanner-table tr { cursor: pointer; transition: background 0.1s; }
     table.scanner-table tr:hover { background: #F5F2EB; }
     table.scanner-table tr.active-row { background: var(--sage-light); font-weight: 700; }
+    table.scanner-table tr.active-auction-row { background: #FFF7ED; font-weight: 700; border-left: 3px solid var(--terracotta); }
     .apt-cell-title { font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 5px; }
     .apt-cell-sub { font-size: 10.5px; color: var(--text-muted); margin-top: 1px; }
     .star-btn {
@@ -303,15 +406,16 @@
 
     /* Sub-tabs inside Right Column */
     .subtab-bar {
-      display: flex; gap: 6px; border-bottom: 1px solid var(--border);
-      padding: 0 15px; background: #FAF8F3;
+      display: flex; gap: 4px; border-bottom: 1px solid var(--border);
+      padding: 0 12px; background: #FAF8F3; flex-wrap: wrap;
     }
     .subtab-btn {
-      border: none; background: transparent; padding: 10px 12px;
-      font-size: 12.5px; font-weight: 700; color: var(--text-sub);
+      border: none; background: transparent; padding: 10px 10px;
+      font-size: 12px; font-weight: 700; color: var(--text-sub);
       border-bottom: 2px solid transparent; cursor: pointer;
     }
-    .subtab-btn.active { color: var(--sage); border-bottom-color: var(--sage); }
+    .subtab-btn.active { color: var(--sage); border-bottom-color: var(--sage); font-weight: 800; }
+    .subtab-btn.active-auction-tab { color: var(--terracotta); border-bottom-color: var(--terracotta); font-weight: 800; background: #FFF7ED; }
 
     /* Calculator & Form Grid */
     .calc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin-bottom: 11px; }
@@ -320,6 +424,7 @@
     .form-field input, .form-field select {
       padding: 6px 8px; border: 1px solid var(--border-strong);
       border-radius: 6px; background: var(--bg); font-size: 12px; font-weight: 600;
+      font-family: inherit;
     }
     .cfo-result-box {
       background: #F4F7F5; border: 1px solid var(--sage-border);
@@ -327,6 +432,56 @@
     }
     .cfo-row { display: flex; justify-content: space-between; padding: 4px 0; font-size: 12px; border-bottom: 1px dashed var(--border); }
     .cfo-row:last-child { border-bottom: none; }
+
+    /* Auction CFO Calculator Specific Styles */
+    .auc-case-banner {
+      background: #FFF7ED;
+      border: 1px solid #FDBA74;
+      border-radius: 9px;
+      padding: 9px 12px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .auc-bid-slider-box {
+      background: #FAF8F3;
+      border: 1px solid var(--border-strong);
+      border-radius: 9px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+    }
+    .auc-kpi-4grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .auc-kpi-box {
+      background: #FFFDF9;
+      border: 1px solid var(--border-strong);
+      border-radius: 8px;
+      padding: 9px 11px;
+    }
+    .auc-kpi-title { font-size: 11px; font-weight: 700; color: var(--text-sub); }
+    .auc-kpi-num { font-size: 15.5px; font-weight: 900; margin-top: 3px; color: var(--text); }
+    .auc-kpi-desc { font-size: 10.5px; color: var(--text-muted); margin-top: 2px; }
+    .cfo-verdict-banner {
+      margin-top: 10px;
+      padding: 10px 13px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .verdict-good { background: #ECFDF5; border: 1.5px solid #10B981; color: #065F46; }
+    .verdict-warn { background: #FFFBEB; border: 1.5px solid #F59E0B; color: #92400E; }
+    .verdict-danger { background: #FEF2F2; border: 1.5px solid #EF4444; color: #991B1B; }
 
     /* Modal & Floating Chat */
     .modal-backdrop {
@@ -336,8 +491,9 @@
     .modal-backdrop.open { display: flex; }
     .modal-card {
       background: var(--card); border: 1px solid var(--border);
-      border-radius: 12px; width: 520px; max-width: 94vw; padding: 18px;
+      border-radius: 12px; width: 580px; max-width: 95vw; padding: 18px;
       box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+      max-height: 90vh; overflow-y: auto;
     }
     .chat-fab {
       position: fixed; right: 22px; bottom: 22px; z-index: 1500;
@@ -347,8 +503,8 @@
       display: flex; align-items: center; gap: 7px;
     }
     .chat-drawer {
-      position: fixed; right: 22px; bottom: 72px; width: 390px; max-width: 92vw;
-      height: 510px; background: var(--card); border: 1px solid var(--border-strong);
+      position: fixed; right: 22px; bottom: 72px; width: 400px; max-width: 92vw;
+      height: 530px; background: var(--card); border: 1px solid var(--border-strong);
       border-radius: 14px; box-shadow: 0 12px 34px rgba(0,0,0,0.16);
       display: none; flex-direction: column; z-index: 1500; overflow: hidden;
     }
@@ -369,18 +525,23 @@
     <div class="brand-wrap">
       <div class="brand-logo">RE</div>
       <div>
-        <div class="brand-title">클로우웍스 부동산 투자 · 시세 · 입지 분석 대시보드 <span style="font-size:12px;font-weight:600;color:var(--sage);">v1.0</span></div>
+        <div class="brand-title">
+          클로우웍스 부동산 투자 · 시세 · 입지 · 경매 분석 대시보드
+          <span style="font-size:12px;font-weight:800;color:var(--sage);">v2.0</span>
+        </div>
         <div class="brand-sub">
-          <span class="arch-badge">Zero-Supabase 3-Tier Architecture</span>
-          <span>Vercel `/api/molit` 프록시 + GitHub Daily Action + 내장 30대 핵심 단지 36개월 시드</span>
+          <span class="arch-badge">Zero-Supabase 3-Tier</span>
+          <span class="auc-top-badge">🔨 법원경매 · 온비드 공매 시세 대조 & 욘두 낙찰가 계산기 탑재</span>
+          <span>Vercel <code>/api/molit</code> + <code>/api/auction</code> Edge 캐시</span>
           <span id="syncStatusBadge" class="pill-navy">시드 스냅샷: 2026-10-26 KST</span>
         </div>
       </div>
     </div>
     <div class="header-actions">
-      <button class="btn btn-sage" onclick="RE_APP.fetchLiveMolit()">🔄 국토부 실거래 실시간 동기화</button>
-      <button class="btn" onclick="RE_APP.openApiModal()">🔑 공공데이터 API 설정</button>
-      <button class="btn" onclick="RE_APP.exportUserData()">💾 관심단지·임장노트 백업(JSON)</button>
+      <button class="btn btn-amber" onclick="RE_APP.setScannerMode('auction')">🔨 경매·공매 알짜 스캐너</button>
+      <button class="btn btn-sage" onclick="RE_APP.fetchLiveMolit()">🔄 국토부·온비드 실시간 동기화</button>
+      <button class="btn" onclick="RE_APP.openApiModal()">⚙️ 공공데이터 API 연동</button>
+      <button class="btn" onclick="RE_APP.exportUserData()">💾 관심·경매·임장 백업(JSON)</button>
       <button class="btn" onclick="document.getElementById('importJsonInput').click()">📂 복원</button>
       <input type="file" id="importJsonInput" accept=".json" style="display:none" onchange="RE_APP.importUserData(event)" />
     </div>
@@ -390,9 +551,9 @@
   <section class="control-strip">
     <div class="kpi-grid">
       <div class="kpi-card">
-        <div class="kpi-label">분석 대상 단지 (필터 적용)</div>
+        <div class="kpi-label">분석 대상 단지 & 경매 진행</div>
         <div class="kpi-val" id="kpiCount">30개 단지</div>
-        <div class="kpi-foot"><span class="pill-navy" id="kpiRegionLabel">전 권역</span> <span>총 <strong id="kpiHouseholds">58,420</strong>세대</span></div>
+        <div class="kpi-foot"><span class="pill-amber" id="kpiAuctionCountBadge">🔨 경매·공매 12건 진행</span> <span>총 <strong id="kpiHouseholds">58,420</strong>세대</span></div>
       </div>
       <div class="kpi-card">
         <div class="kpi-label">권역 평균 실거래가 (<span class="area-unit-txt">84㎡</span>)</div>
@@ -405,14 +566,14 @@
         <div class="kpi-foot"><span class="pill-sage" id="kpiAvgJeonseRatio">전세가율 64.2%</span> <span>안전 레버리지 구간</span></div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-label">전고점 대비 평균 할인율</div>
-        <div class="kpi-val" id="kpiAvgDrop">-18.4%</div>
-        <div class="kpi-foot"><span class="pill-amber" id="kpiUndervaluedCnt">전고점 -20% 이하 14곳</span></div>
+        <div class="kpi-label">경매 최저가 시세 대비 평균 할인</div>
+        <div class="kpi-val" id="kpiAvgDrop" style="color:var(--terracotta);">-25.4%</div>
+        <div class="kpi-foot"><span class="pill-amber" id="kpiUndervaluedCnt">평균 안전마진 +1.85억</span></div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-label">최고 입지·저평가 추천 픽</div>
+        <div class="kpi-label">최고 입지·안전마진 추천 픽</div>
         <div class="kpi-val" id="kpiTopPickName" style="font-size:15px;">루원시티 SK리더스뷰 1차</div>
-        <div class="kpi-foot"><span class="pill-sage" id="kpiTopPickMeta">입지 93점 · 갭 2.50억</span></div>
+        <div class="kpi-foot"><span class="pill-sage" id="kpiTopPickMeta">경매 최저 5.25억 (시세 -2.20억)</span></div>
       </div>
     </div>
 
@@ -424,10 +585,9 @@
           <option value="ALL">전체 권역 (인천·경기·서울 30대 단지)</option>
           <option value="인천 서구(루원·청라·검단)">인천 서구 (루원·청라·검단 10곳)</option>
           <option value="인천 송도·연수">인천 송도·연수 (5곳)</option>
-          <option value="인천 부평·구월">인천 부평·구월 (3곳)</option>
-          <option value="경기 주요(과천·분당·광명·하남·김포)">경기 주요 (과천·분당·광명·하남·김포 5곳)</option>
+          <option value="인천 부평·구월">인천 부평·구월 (4곳)</option>
           <option value="서울 마포·용산·성동">서울 마포·용산·성동 (4곳)</option>
-          <option value="서울 강남·서초·송파">서울 강남·서초·송파 (3곳)</option>
+          <option value="서울 강남·서초·송파">서울 강남·서초·송파 (4곳)</option>
           <option value="서울 노원·목동">서울 노원·목동·영등포 (3곳)</option>
         </select>
 
@@ -454,24 +614,29 @@
         <label style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;cursor:pointer;">
           <input type="checkbox" id="onlyWatchlist" onchange="RE_APP.applyFilters()" /> ⭐ 관심단지만
         </label>
-        <input type="text" id="searchKeyword" class="text-input" placeholder="단지명·법정동·지하철 검색..." oninput="RE_APP.applyFilters()" style="width:165px;" />
+        <input type="text" id="searchKeyword" class="text-input" placeholder="단지명·사건번호·법정동 검색..." oninput="RE_APP.applyFilters()" style="width:165px;" />
       </div>
     </div>
   </section>
 
   <!-- Main 2-Column Split Grid -->
   <main class="main-grid">
-    <!-- LEFT COLUMN: Map + Gap Scanner Table -->
+    <!-- LEFT COLUMN: Map + Scanner Table (Normal / Auction Dual Mode) -->
     <div class="left-col">
       <div class="panel">
         <div class="panel-head">
           <div>
-            <div class="panel-title">🗺️ 인터랙티브 실거래 · 갭투자 레이더 맵 <span class="pill-sage" id="mapRadiusBadge">반경 500m 역세권·학군 오버레이 ON</span></div>
-            <div class="panel-sub">마커 클릭 시 우측 상세 시세·입지·수익률 시뮬레이터가 즉시 연동됩니다.</div>
+            <div class="panel-title">
+              🗺️ 인터랙티브 실거래 · 경매 최저가 레이더 맵
+              <span class="pill-sage" id="mapRadiusBadge">반경 500m 역세권·학군 오버레이 ON</span>
+              <span class="pill-amber">🔨 주황 배지 = 경매·공매 진행 단지</span>
+            </div>
+            <div class="panel-sub">마커 클릭 시 우측 단지 딥다이브 및 욘두(CFO) 일반/경매 수익률 시뮬레이터가 즉시 연동됩니다.</div>
           </div>
-          <div style="display:flex;gap:6px;">
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
             <button class="btn" onclick="RE_APP.focusRegion('인천 서구(루원·청라·검단)')">루원·청라·검단</button>
-            <button class="btn" onclick="RE_APP.focusRegion('인천 송도·연수')">송도</button>
+            <button class="btn" onclick="RE_APP.focusRegion('인천 송도·연수')">송도·연수</button>
+            <button class="btn" onclick="RE_APP.focusRegion('인천 부평·구월')">부평·구월</button>
             <button class="btn" onclick="RE_APP.focusRegion('서울 마포·용산·성동')">마용성</button>
             <button class="btn" onclick="RE_APP.focusRegion('서울 강남·서초·송파')">강남3구</button>
           </div>
@@ -479,50 +644,98 @@
         <div id="radarMap"></div>
         <div class="map-toolbar">
           <div id="selectedMapBrief">📍 선택 단지: <strong>루원시티 SK리더스뷰 1차</strong> (인천2호선 가정역 도보 2분 · 인천가원초 도보 4분)</div>
-          <div style="display:flex;gap:6px;">
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <a id="courtAuctionQuickLink" href="https://www.courtauction.go.kr" target="_blank" rel="noopener" class="btn btn-amber" style="text-decoration:none;padding:4px 9px;">⚖️ 대법원 법원경매</a>
+            <a id="onbidQuickLink" href="https://www.onbid.co.kr" target="_blank" rel="noopener" class="btn" style="text-decoration:none;padding:4px 9px;">🏛️ 캠코 온비드</a>
             <a id="naverLandLink" href="https://new.land.naver.com" target="_blank" rel="noopener" class="btn btn-sage" style="text-decoration:none;padding:4px 9px;">🟢 네이버 부동산 호가</a>
             <a id="kakaoMapLink" href="https://map.kakao.com" target="_blank" rel="noopener" class="btn" style="text-decoration:none;padding:4px 9px;">🟡 카카오맵 · 로드뷰</a>
-            <a id="hogangnonoLink" href="https://hogangnono.com" target="_blank" rel="noopener" class="btn" style="text-decoration:none;padding:4px 9px;">🟣 호갱노노 학군·상권</a>
+            <a id="hogangnonoLink" href="https://hogangnono.com" target="_blank" rel="noopener" class="btn" style="text-decoration:none;padding:4px 9px;">🟣 호갱노노</a>
           </div>
         </div>
       </div>
 
-      <!-- Gap Investment & Undervaluation Scanner Table -->
+      <!-- Dual-Mode Scanner Panel: Mode 1 (All 30 Complexes) vs Mode 2 (Auction & Public Sale Scanner) -->
       <div class="panel">
-        <div class="panel-head">
-          <div>
-            <div class="panel-title">📊 저평가 · 갭투자 스캐너 테이블 (<span class="area-unit-txt">84㎡</span> 기준)</div>
-            <div class="panel-sub">컬럼 헤더를 클릭해 매매가, 갭(자기자본), 전세가율, 전고점 대비 하락률, 입지점수 순으로 정렬하세요.</div>
+        <div class="scanner-mode-bar">
+          <div class="mode-switch-tabs">
+            <button id="modeTabNormal" class="mode-tab-btn active-normal" onclick="RE_APP.setScannerMode('normal')">
+              📊 전체 실거래·갭 스캐너 (30단지)
+            </button>
+            <button id="modeTabAuction" class="mode-tab-btn" onclick="RE_APP.setScannerMode('auction')">
+              🔨 경매·공매 알짜 스캐너 (실거래 시세 대조)
+            </button>
           </div>
-          <button class="btn" onclick="RE_APP.exportCsv()">📥 CSV 내보내기</button>
+          <div style="display:flex;gap:6px;align-items:center;">
+            <button class="btn btn-amber" onclick="RE_APP.openAuctionAddModal()">＋ 사건번호 직접 등록·시세 대조</button>
+            <button class="btn" onclick="RE_APP.exportCsv()">📥 CSV 내보내기</button>
+          </div>
         </div>
-        <div class="table-wrap">
-          <table class="scanner-table">
-            <thead>
-              <tr>
-                <th onclick="RE_APP.setSort('name')">단지명 / 권역 ↕</th>
-                <th onclick="RE_APP.setSort('recentSale')">최근 실거래 ↕</th>
-                <th onclick="RE_APP.setSort('recentJeonse')">최근 전세 ↕</th>
-                <th onclick="RE_APP.setSort('gap')">매매-전세 갭 ↕</th>
-                <th onclick="RE_APP.setSort('jeonseRatio')">전세가율 ↕</th>
-                <th onclick="RE_APP.setSort('dropPct')">전고점 대비 ↕</th>
-                <th onclick="RE_APP.setSort('volMonthly')">월 거래량 ↕</th>
-                <th onclick="RE_APP.setSort('totalScore')">입지점수 ↕</th>
-              </tr>
-            </thead>
-            <tbody id="scannerTableBody"></tbody>
-          </table>
+
+        <!-- Mode 1: Normal 30-Complex Gap Scanner -->
+        <div id="normalScannerWrap">
+          <div class="table-wrap">
+            <table class="scanner-table">
+              <thead>
+                <tr>
+                  <th onclick="RE_APP.setSort('name')">단지명 / 권역 / 경매여부 ↕</th>
+                  <th onclick="RE_APP.setSort('recentSale')">최근 실거래 ↕</th>
+                  <th onclick="RE_APP.setSort('recentJeonse')">최근 전세 ↕</th>
+                  <th onclick="RE_APP.setSort('gap')">매매-전세 갭 ↕</th>
+                  <th onclick="RE_APP.setSort('jeonseRatio')">전세가율 ↕</th>
+                  <th onclick="RE_APP.setSort('dropPct')">전고점 대비 ↕</th>
+                  <th onclick="RE_APP.setSort('volMonthly')">월 거래량 ↕</th>
+                  <th onclick="RE_APP.setSort('totalScore')">입지점수 ↕</th>
+                </tr>
+              </thead>
+              <tbody id="scannerTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Mode 2: Auction & Public-Sale Scanner (Court Auction + Onbid matched against MOLIT price) -->
+        <div id="auctionScannerWrap" style="display:none;">
+          <div class="auction-filter-bar">
+            <div style="display:flex;gap:5px;flex-wrap:wrap;align-items:center;" id="auctionCourtChipGroup">
+              <button class="court-chip active" data-filter="ALL" onclick="RE_APP.setAuctionFilter('ALL')">전체 물건</button>
+              <button class="court-chip" data-filter="인천지법(서구·연수·부평)" onclick="RE_APP.setAuctionFilter('인천지법(서구·연수·부평)')">인천지법 (서구·연수·부평)</button>
+              <button class="court-chip" data-filter="서울중앙·남부·서부" onclick="RE_APP.setAuctionFilter('서울중앙·남부·서부')">서울중앙·남부·서부·동부</button>
+              <button class="court-chip" data-filter="수원·성남·고양" onclick="RE_APP.setAuctionFilter('수원·성남·고양')">경기(수원·성남·부천)</button>
+              <button class="court-chip" data-filter="법원경매" onclick="RE_APP.setAuctionFilter('법원경매')">⚖️ 법원경매만</button>
+              <button class="court-chip" data-filter="온비드공매" onclick="RE_APP.setAuctionFilter('온비드공매')">🏛️ 캠코 온비드 공매만</button>
+            </div>
+            <label style="display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:800;color:var(--sage);cursor:pointer;">
+              <input type="checkbox" id="onlySafeAuction" onchange="RE_APP.renderAuctionTable()" /> 🟢 안전 권리물건만(인수금 0원)
+            </label>
+          </div>
+          <div class="table-wrap">
+            <table class="scanner-table">
+              <thead>
+                <tr>
+                  <th>사건번호 / 관할법원</th>
+                  <th style="text-align:left;">단지명 · 동·층 · 면적</th>
+                  <th>감정가</th>
+                  <th>최저입찰가 (유찰)</th>
+                  <th>현재 실거래 시세</th>
+                  <th>시세 대비 안전마진</th>
+                  <th style="text-align:left;">권리분석 핵심 배지 · 미납관리비</th>
+                  <th>매각기일 / 원문</th>
+                </tr>
+              </thead>
+              <tbody id="auctionTableBody"></tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- RIGHT COLUMN: Complex Deep-Dive + Chart + CFO Simulator + Field Notes -->
+    <!-- RIGHT COLUMN: Complex Deep-Dive + Chart + Dual CFO Simulator + Field Notes -->
     <div class="right-col">
       <!-- Complex Deep-Dive Panel -->
       <div class="panel">
         <div class="panel-head">
           <div class="panel-title">🏢 단지 정밀 딥다이브 & 36개월 실거래·전세 추이</div>
           <div style="display:flex;align-items:center;gap:6px;">
+            <span id="detailAuctionAlertBadge" class="pill-amber" style="display:none;cursor:pointer;" onclick="RE_APP.switchSubTab('auction-cfo')">🔨 경매 진행중 (클릭 시 낙찰가 계산)</span>
             <button id="detailStarBtn" class="btn" onclick="RE_APP.toggleWatchlistCurrent()">⭐ 관심단지 등록</button>
           </div>
         </div>
@@ -564,7 +777,7 @@
 
           <!-- 36-Month SVG Dual-Line + Volume Bar Chart -->
           <div style="background:#FAF8F3;border:1px solid var(--border);border-radius:9px;padding:10px 12px;margin-top:8px;">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;font-size:11.5px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;font-size:11.5px;flex-wrap:wrap;gap:6px;">
               <span style="font-weight:800;color:var(--text);">📈 최근 36개월 실거래 매매가 · 전세가 · 거래량 추이 (2023.11 ~ 2026.10)</span>
               <div style="display:flex;gap:10px;font-weight:700;">
                 <span style="color:var(--sage);">● 매매 실거래(억)</span>
@@ -572,7 +785,7 @@
                 <span style="color:#B5AFA2;">■ 월 거래량(건)</span>
               </div>
             </div>
-            <div id="priceChartContainer" style="width:100%;height:205px;"></div>
+            <div id="priceChartContainer" style="width:100%;height:195px;"></div>
           </div>
 
           <!-- 5-Axis Location Scorecard -->
@@ -592,15 +805,20 @@
         </div>
       </div>
 
-      <!-- Bottom Right Multi-Tab Panel: (1) 욘두 CFO 수익률 계산기, (2) 실거래 이력, (3) 임장 노트 & 비교 -->
+      <!-- Bottom Right Multi-Tab Panel:
+           Tab A: 💰 일반 매매 · 갭투자 수익률 시뮬레이터
+           Tab B: 🔨 욘두(CFO) 경매 낙찰가 · 경락잔금 · 안전마진 시뮬레이터 (NEW!)
+           Tab C: 📋 최근 실거래 신고 내역
+           Tab D: 📝 임장 체크리스트 & 단지 비교 -->
       <div class="panel">
         <div class="subtab-bar">
-          <button class="subtab-btn active" data-tab="cfo" onclick="RE_APP.switchSubTab('cfo')">🧮 욘두 CFO 취득세·DSR·수익률 시뮬레이터</button>
-          <button class="subtab-btn" data-tab="tx" onclick="RE_APP.switchSubTab('tx')">📋 최근 실거래 신고 내역</button>
-          <button class="subtab-btn" data-tab="notes" onclick="RE_APP.switchSubTab('notes')">📝 임장 체크리스트 & 단지 비교</button>
+          <button class="subtab-btn active" data-tab="cfo" onclick="RE_APP.switchSubTab('cfo')">💰 일반 매매 · 갭투자 수익률 시뮬레이터</button>
+          <button class="subtab-btn" data-tab="auction-cfo" onclick="RE_APP.switchSubTab('auction-cfo')">🔨 욘두(CFO) 경매 낙찰가 · 경락잔금 · 안전마진 시뮬레이터</button>
+          <button class="subtab-btn" data-tab="tx" onclick="RE_APP.switchSubTab('tx')">📋 최근 실거래 내역</button>
+          <button class="subtab-btn" data-tab="notes" onclick="RE_APP.switchSubTab('notes')">📝 임장 노트 & 비교</button>
         </div>
 
-        <!-- Tab 1: Yondu CFO Simulator -->
+        <!-- Tab A: Existing General Purchase / Gap Investment Simulator (Preserved 100%) -->
         <div class="panel-body" id="subtab-cfo">
           <div class="calc-grid">
             <div class="form-field">
@@ -639,7 +857,96 @@
           <div class="cfo-result-box" id="cfoResultBox"></div>
         </div>
 
-        <!-- Tab 2: Recent Transactions -->
+        <!-- Tab B: NEW Yondu (CFO) Auction Bid, Residual Loan & Safety Margin Simulator -->
+        <div class="panel-body" id="subtab-auction-cfo" style="display:none;">
+          <div class="auc-case-banner">
+            <div>
+              <div style="font-size:11px;font-weight:800;color:var(--terracotta);">🔨 선택된 경매·공매 사건 (스캐너 행 클릭 시 자동 연동 · 중개보수 0원 적용)</div>
+              <div id="aucCalcCaseTitle" style="font-size:13px;font-weight:900;color:var(--text);margin-top:2px;">
+                2026타경10482 (인천지법 본원 4계) — 루원시티 SK리더스뷰 1차 (104동 18층 · 84㎡)
+              </div>
+            </div>
+            <select id="aucCaseSelect" class="select-input" style="font-weight:700;" onchange="RE_APP.selectAuctionItem(this.value, false)"></select>
+          </div>
+
+          <!-- Bid Slider + Real-time Bid Ratios -->
+          <div class="auc-bid-slider-box">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:6px;">
+              <label style="font-size:12px;font-weight:900;color:var(--terracotta);">
+                🎯 나의 목표 입찰가 (만원):
+                <input type="number" id="aucBidManInput" value="56500" step="100" style="width:105px;padding:4px 7px;border:1.5px solid var(--terracotta);border-radius:6px;font-size:13px;font-weight:900;color:var(--terracotta);background:#fff;margin-left:4px;" oninput="RE_APP.syncBidFromInput()" /> 만원
+                (<span id="aucBidEokLabel">5.65억</span>)
+              </label>
+              <div style="display:flex;gap:6px;flex-wrap:wrap;">
+                <span class="pill-amber" id="aucBidVsAppraisedBadge">감정가 대비 낙찰가율 75.3%</span>
+                <span class="pill-sage" id="aucBidVsMarketBadge">실거래 시세 대비 75.8%</span>
+              </div>
+            </div>
+            <input type="range" id="aucBidSlider" min="45000" max="80000" step="100" value="56500" style="width:100%;accent-color:var(--terracotta);" oninput="RE_APP.syncBidFromSlider()" />
+            <div style="display:flex;justify-content:space-between;font-size:10.5px;color:var(--text-muted);margin-top:3px;">
+              <span id="aucSliderMinTxt">최저입찰가: 52,500만원 (5.25억)</span>
+              <span id="aucSliderMarketTxt">현재 실거래 시세: 74,500만원 (7.45억)</span>
+              <span id="aucSliderMaxTxt">감정가: 75,000만원 (7.50억)</span>
+            </div>
+          </div>
+
+          <div class="calc-grid">
+            <div class="form-field">
+              <label>현재 실거래 시세 / 전세가 (억)</label>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
+                <input type="number" id="aucMarketPrice" step="0.05" value="7.45" oninput="RE_APP.runAuctionCalculator()" title="현재 실거래 시세(억)" />
+                <input type="number" id="aucJeonsePrice" step="0.05" value="4.95" oninput="RE_APP.runAuctionCalculator()" title="현재 전세 시세(억)" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label>감정가 / 최저입찰가 (억)</label>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
+                <input type="number" id="aucAppraisedPrice" step="0.05" value="7.50" oninput="RE_APP.runAuctionCalculator()" title="감정가(억)" />
+                <input type="number" id="aucMinBidPrice" step="0.05" value="5.25" oninput="RE_APP.runAuctionCalculator()" title="최저입찰가(억)" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label>보유 주택수 (경매 취득세율)</label>
+              <select id="aucHouseCount" onchange="RE_APP.runAuctionCalculator()">
+                <option value="1">1주택 (1.1%~3.3% · 중개보수 0원)</option>
+                <option value="2_non">조정외 2주택 (1.1%~3.3%)</option>
+                <option value="2_adj">조정대상 2주택 (8.4% 중과)</option>
+                <option value="3_plus">3주택 이상 / 법인 (12.4%)</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label>명도비·이사합의금 / 미납관리비 (만원)</label>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
+                <input type="number" id="aucEvictionCost" step="50" value="350" oninput="RE_APP.runAuctionCalculator()" title="명도비·이사합의금(만원)" />
+                <input type="number" id="aucUnpaidFee" step="10" value="140" oninput="RE_APP.runAuctionCalculator()" title="미납관리비 인수분(만원)" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label>인수 보증금 / 법무사·등기비 (만원)</label>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
+                <input type="number" id="aucAssumedDeposit" step="100" value="0" oninput="RE_APP.runAuctionCalculator()" title="선순위 임차인 인수 보증금(만원)" />
+                <input type="number" id="aucLegalFee" step="10" value="95" oninput="RE_APP.runAuctionCalculator()" title="법무사·등기·인지세(만원)" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label>경락잔금대출 한도 기준 & 금리(%)</label>
+              <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:4px;">
+                <select id="aucLoanRule" onchange="RE_APP.runAuctionCalculator()">
+                  <option value="std">표준: min(감정70%, 낙찰80%)</option>
+                  <option value="dsr70">DSR 감안: 낙찰가의 70%</option>
+                  <option value="dsr60">보수적: 낙찰가의 60%</option>
+                  <option value="jeonse">전세 세팅 전환(전세금 레버리지)</option>
+                </select>
+                <input type="number" id="aucLoanRate" step="0.1" value="4.2" oninput="RE_APP.runAuctionCalculator()" title="경락잔금대출 금리(%)" />
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 High-Clarity KPI Cards + Verdict Banner -->
+          <div id="auctionCfoOutputWrap"></div>
+        </div>
+
+        <!-- Tab C: Recent Transactions -->
         <div class="panel-body" id="subtab-tx" style="display:none;">
           <table class="scanner-table">
             <thead>
@@ -657,7 +964,7 @@
           </table>
         </div>
 
-        <!-- Tab 3: Field Notes & Watchlist Comparison -->
+        <!-- Tab D: Field Notes & Watchlist Comparison -->
         <div class="panel-body" id="subtab-notes" style="display:none;">
           <div style="margin-bottom:10px;">
             <label style="font-size:11.5px;font-weight:800;color:var(--text);display:block;margin-bottom:5px;">
@@ -668,9 +975,9 @@
               <label><input type="checkbox" id="chkNoise" onchange="RE_APP.saveFieldNote()" /> 도로·철도 소음 없음</label>
               <label><input type="checkbox" id="chkParking" onchange="RE_APP.saveFieldNote()" /> 이중주차·야간주차 양호</label>
               <label><input type="checkbox" id="chkSchoolPath" onchange="RE_APP.saveFieldNote()" /> 초등학교 안전통학로 확보</label>
-              <label><input type="checkbox" id="chkListing" onchange="RE_APP.saveFieldNote()" /> 부동산 급매물 확인완료</label>
+              <label><input type="checkbox" id="chkListing" onchange="RE_APP.saveFieldNote()" /> 부동산 급매물·관리실 미납체크 완료</label>
             </div>
-            <textarea id="fieldNoteText" rows="3" style="width:100%;padding:8px;border:1px solid var(--border-strong);border-radius:7px;background:var(--bg);font-family:inherit;font-size:12px;" placeholder="현장 중개소 브리핑, 급매 호가, 동·향별 로얄동 메모를 기록하세요..." oninput="RE_APP.saveFieldNote()"></textarea>
+            <textarea id="fieldNoteText" rows="3" style="width:100%;padding:8px;border:1px solid var(--border-strong);border-radius:7px;background:var(--bg);font-family:inherit;font-size:12px;" placeholder="현장 중개소 브리핑, 경매 점유자 탐문, 관리사무소 미납관리비 확인 내역을 기록하세요..." oninput="RE_APP.saveFieldNote()"></textarea>
           </div>
           <div>
             <div style="font-size:11.5px;font-weight:800;color:var(--text);margin-bottom:5px;">⭐ 관심단지 요약 비교표 (<span id="watchlistCountTxt">0</span>개)</div>
@@ -681,23 +988,111 @@
     </div>
   </main>
 
-  <!-- Public Data Portal API Config Modal -->
+  <!-- Modal 1: Add/Edit Custom Court Auction / Onbid Item -->
+  <div class="modal-backdrop" id="auctionAddModal">
+    <div class="modal-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+        <h3 style="font-size:15px;font-weight:800;color:var(--terracotta);">🔨 경매·공매 사건번호 직접 등록 & 실거래 시세 자동 대조</h3>
+        <button class="btn" onclick="RE_APP.closeAuctionAddModal()">닫기</button>
+      </div>
+      <p style="font-size:12px;color:var(--text-sub);margin-bottom:12px;">
+        대법원 법원경매(<code>예: 2026타경10482</code>) 또는 온비드 공매 물건을 선택 단지와 연결하면, 해당 단지의 <strong>국토부 최근 실거래 시세·전세가</strong>와 자동 매칭되어 안전마진을 계산합니다.
+      </p>
+      <div class="calc-grid" style="grid-template-columns:1fr 1fr;">
+        <div class="form-field">
+          <label>대상 아파트 단지 선택 (실거래 시세 자동 연동)</label>
+          <select id="newAucComplexId" onchange="RE_APP.onNewAuctionComplexChange()"></select>
+        </div>
+        <div class="form-field">
+          <label>경매 / 공매 구분 & 관할법원</label>
+          <div style="display:grid;grid-template-columns:1fr 1.3fr;gap:5px;">
+            <select id="newAucType">
+              <option value="법원경매">법원경매</option>
+              <option value="온비드공매">온비드공매</option>
+            </select>
+            <select id="newAucCourt">
+              <option value="인천지법(서구·연수·부평)">인천지법(서구·연수·부평)</option>
+              <option value="서울중앙·남부·서부">서울중앙·남부·서부·동부</option>
+              <option value="수원·성남·고양">수원·성남·부천지원</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>사건번호 및 담당계</label>
+          <input type="text" id="newAucCaseNo" value="2026타경15820 (인천지법 본원 5계)" />
+        </div>
+        <div class="form-field">
+          <label>동·층수 및 전용면적</label>
+          <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:5px;">
+            <input type="text" id="newAucFloor" value="108동 16층" />
+            <select id="newAucArea">
+              <option value="84㎡">84㎡</option>
+              <option value="59㎡">59㎡</option>
+              <option value="101㎡+">101㎡+</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>감정가 (억원) / 최저입찰가 (억원)</label>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;">
+            <input type="number" id="newAucAppraised" step="0.05" value="7.40" />
+            <input type="number" id="newAucMinBid" step="0.05" value="5.18" />
+          </div>
+        </div>
+        <div class="form-field">
+          <label>유찰 차수 / 매각기일</label>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;">
+            <input type="text" id="newAucFailCount" value="1회 유찰 (70%)" />
+            <input type="date" id="newAucDate" value="2026-11-26" />
+          </div>
+        </div>
+        <div class="form-field" style="grid-column:span 2;">
+          <label>권리분석 핵심 요약 태그</label>
+          <input type="text" id="newAucRights" value="말소기준권리 이후 임차인 없음 (안전 · 인수금 0원)" />
+        </div>
+        <div class="form-field">
+          <label>예상 미납관리비 / 명도비 (만원)</label>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;">
+            <input type="number" id="newAucUnpaid" value="150" />
+            <input type="number" id="newAucEviction" value="350" />
+          </div>
+        </div>
+        <div class="form-field">
+          <label>선순위 인수보증금(만원) / 명도 난이도</label>
+          <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:5px;">
+            <input type="number" id="newAucDeposit" value="0" />
+            <select id="newAucDiff">
+              <option value="하 (공실/소유자 점유)">하 (공실/소유자 점유)</option>
+              <option value="중 (일반 임차인)">중 (일반 임차인)</option>
+              <option value="상 (선순위 권리 확인)">상 (선순위 권리 확인)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:10px;">
+        <button class="btn" onclick="RE_APP.closeAuctionAddModal()">취소</button>
+        <button class="btn btn-amber" onclick="RE_APP.saveCustomAuctionItem()">🔨 등록 및 욘두 낙찰가 시뮬레이터 실행</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Public Data Portal API Config Modal (MOLIT + Onbid/Court Auction) -->
   <div class="modal-backdrop" id="apiModal">
     <div class="modal-card">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-        <h3 style="font-size:15px;font-weight:800;">🔑 국토교통부 실거래가 API & Zero-Supabase 연동 설정</h3>
+        <h3 style="font-size:15px;font-weight:800;">⚙️ 공공데이터 API 연동 설정 (국토부 실거래가 & 캠코 온비드 공매/법원경매)</h3>
         <button class="btn" onclick="RE_APP.closeApiModal()">닫기</button>
       </div>
       <p style="font-size:12px;color:var(--text-sub);margin-bottom:12px;">
-        이 대시보드는 별도 유료 DB 없이도 <strong>① 내장 30대 단지 시드 스냅샷</strong> + <strong>② Vercel `/api/molit` 서버리스 프록시(Edge 24h 캐싱)</strong> + <strong>③ GitHub Actions 일일 자동 수집</strong>으로 작동합니다.
+        수퍼베이스 없이 <strong>① 내장 30대 단지 + 경매 12건 시드</strong> + <strong>② Vercel <code>/api/molit</code> & <code>/api/auction</code> 서버리스 프록시(Edge 24h 캐싱)</strong>로 동작합니다. 공공데이터포털(<code>data.go.kr</code>) 인증키 하나로 두 API를 모두 호출할 수 있습니다.
       </p>
       <div class="form-field" style="margin-bottom:10px;">
-        <label>공공데이터포털(data.go.kr) 일반 인증키 (선택 입력)</label>
+        <label>공공데이터포털(data.go.kr) 통합 인증키 (국토부 실거래가 + 캠코 온비드 공매 공통)</label>
         <input type="text" id="molitKeyInput" placeholder="미입력 시 DEMO_CACHE 스냅샷 모드로 즉시 작동합니다" />
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px;">
         <div class="form-field">
-          <label>조회 법정동코드 (LAWD_CD)</label>
+          <label>1. 국토부 법정동코드 (LAWD_CD)</label>
           <select id="molitLawdSelect">
             <option value="28260">28260 (인천 서구 - 루원·청라·검단)</option>
             <option value="28185">28185 (인천 연수구 - 송도)</option>
@@ -711,42 +1106,50 @@
           <label>계약년월 (DEAL_YMD)</label>
           <input type="text" id="molitYmdInput" value="202610" />
         </div>
+        <div class="form-field">
+          <label>2. 경매·공매 관할 필터 (/api/auction)</label>
+          <select id="auctionProxyCourtSelect">
+            <option value="ALL">전체 관할법원 + 온비드</option>
+            <option value="인천지법">인천지방법원 본원·부천</option>
+            <option value="서울">서울중앙·남부·서부·동부</option>
+          </select>
+        </div>
       </div>
-      <div id="apiTestResult" style="background:var(--bg);border:1px solid var(--border);border-radius:7px;padding:9px;font-size:11.5px;margin-bottom:12px;max-height:140px;overflow-y:auto;">
-        상태: 준비 완료 (`🔄 국토부 실거래 실시간 동기화` 클릭 시 `/api/molit` 호출)
+      <div id="apiTestResult" style="background:var(--bg);border:1px solid var(--border);border-radius:7px;padding:9px;font-size:11.5px;margin-bottom:12px;max-height:165px;overflow-y:auto;">
+        • <strong>1. 국토부 아파트 매매·전월세 실거래가 API (<code>/api/molit</code>)</strong>: 정상 (Edge 24h 캐시)<br>
+        • <strong>2. 캠코(온비드) 공매 물건 API / 대법원 경매 프록시 (<code>/api/auction</code>)</strong>: 정상 (12건 매칭 완료)
       </div>
-      <div style="display:flex;justify-content:flex-end;gap:8px;">
-        <button class="btn btn-sage" onclick="RE_APP.saveApiKeyAndFetch()">저장 및 실시간 호출 테스트</button>
+      <div style="display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap;">
+        <button class="btn btn-amber" onclick="RE_APP.fetchLiveAuctionProxy()">🔨 2. 온비드·법원경매 API 호출 테스트</button>
+        <button class="btn btn-sage" onclick="RE_APP.saveApiKeyAndFetch()">🔄 1+2 통합 저장 및 실시간 동기화</button>
       </div>
     </div>
   </div>
 
   <!-- Floating AI Real Estate Analyst Chatbot -->
-  <button class="chat-fab" onclick="RE_APP.toggleChat()">🤖 부동산 AI 애널리스트 상담</button>
+  <button class="chat-fab" onclick="RE_APP.toggleChat()">🤖 부동산·경매 AI 애널리스트 상담</button>
   <div class="chat-drawer" id="chatDrawer">
     <div class="panel-head" style="background:var(--sage);color:#fff;">
       <div>
-        <div style="font-weight:800;font-size:13px;">🤖 클로우웍스 부동산 AI 애널리스트 (자비스 × 욘두)</div>
-        <div style="font-size:10.5px;color:#D6E8DF;">가용 자금별 갭투자 추천 · 취득세 · 루원/청라/송도/서울 비교</div>
+        <div style="font-weight:800;font-size:13px;">🤖 클로우웍스 부동산·경매 AI 애널리스트 (자비스 × 욘두)</div>
+        <div style="font-size:10.5px;color:#D6E8DF;">실거래 갭투자 · 법원경매 안전마진 · 임차인 권리분석 · 경락잔금</div>
       </div>
       <button class="btn" style="padding:2px 7px;font-size:11px;" onclick="RE_APP.toggleChat()">✕</button>
     </div>
     <div class="chat-messages" id="chatMessages">
       <div class="msg-bubble msg-ai">
-        안녕하세요 대장! 현재 수도권 30대 핵심 단지의 실거래·전세·입지 데이터가 로드되어 있습니다.<br><br>
-        예시 질문:<br>
-        • <strong>"자기자본 2.5억 이하 인천 서구 초품아 추천해줘"</strong><br>
-        • <strong>"전고점 대비 22% 이상 빠진 저평가 단지 알려줘"</strong><br>
-        • <strong>"현재 선택된 단지 취득세랑 수익률 브리핑해줘"</strong>
+        안녕하세요 대장! 수도권 30대 핵심 단지의 국토부 실거래가와 <strong>법원경매·온비드 공매 12건의 안전마진 데이터</strong>가 로드되어 있습니다.<br><br>
+        아래 추천 질문을 클릭하거나 궁금한 점을 물어보세요!
       </div>
     </div>
     <div style="padding:8px;background:var(--card-sub);border-top:1px solid var(--border);display:flex;gap:5px;flex-wrap:wrap;">
+      <button class="btn btn-amber" style="font-size:11px;padding:3px 7px;" onclick="RE_APP.askQuick('🔨 인천 서구·청라 시세 대비 안전마진 큰 경매물건 추천해줘')">🔨 인천 서구·청라 경매 추천</button>
+      <button class="btn" style="font-size:11px;padding:3px 7px;" onclick="RE_APP.askQuick('⚖️ 대항력 있는 임차인 권리분석 핵심 체크포인트는?')">⚖️ 대항력 임차인 권리분석</button>
       <button class="btn" style="font-size:11px;padding:3px 7px;" onclick="RE_APP.askQuick('자기자본 2.5억 이하 초품아 추천해줘')">💰 2.5억 이하 초품아</button>
-      <button class="btn" style="font-size:11px;padding:3px 7px;" onclick="RE_APP.askQuick('전고점 대비 낙폭 과대 TOP 5 알려줘')">📉 낙폭과대 TOP 5</button>
       <button class="btn" style="font-size:11px;padding:3px 7px;" onclick="RE_APP.askQuick('루원시티 주요 단지 비교해줘')">🏢 루원시티 비교</button>
     </div>
     <div style="padding:9px;background:var(--card);border-top:1px solid var(--border);display:flex;gap:6px;">
-      <input type="text" id="chatInput" class="text-input" style="flex:1;" placeholder="질문을 입력하세요..." onkeydown="if(event.key==='Enter')RE_APP.sendChat()" />
+      <input type="text" id="chatInput" class="text-input" style="flex:1;" placeholder="경매 안전마진, 권리분석, 단지 비교 질문..." onkeydown="if(event.key==='Enter')RE_APP.sendChat()" />
       <button class="btn btn-sage" onclick="RE_APP.sendChat()">전송</button>
     </div>
   </div>
@@ -898,7 +1301,7 @@ const RE_APP = {
     const best = [...list].sort((a, b) => (b.totalScore - this.getAreaMetric(b).dropPct * 0.4) - (a.totalScore - this.getAreaMetric(a).dropPct * 0.4))[0];
 
     document.getElementById('kpiCount').textContent = `${count}개 단지`;
-    document.getElementById('kpiRegionLabel').textContent = region === 'ALL' ? '전 권역' : region.split('(')[0];
+    if (document.getElementById('kpiRegionLabel')) document.getElementById('kpiRegionLabel').textContent = region === 'ALL' ? '전 권역' : region.split('(')[0];
     document.getElementById('kpiHouseholds').textContent = totalHh.toLocaleString();
     document.getElementById('kpiAvgSale').textContent = `${avgSale.toFixed(2)}억`;
     document.getElementById('kpiAvgJeonse').textContent = `${avgJeonse.toFixed(2)}억`;
@@ -947,6 +1350,7 @@ const RE_APP = {
               <button class="star-btn ${isStar ? 'starred' : ''}" onclick="event.stopPropagation();RE_APP.toggleWatchlist('${c.id}')">★</button>
               <span>${c.name}</span>
               ${c.isChopuma ? '<span class="pill-sage" style="font-size:9.5px;">초품아</span>' : ''}
+              ${this.auctionsForComplex && this.auctionsForComplex(c.id).length ? '<span class="pill-amber" style="font-size:9.5px;">🔨 경매</span>' : ''}
             </div>
             <div class="apt-cell-sub">${c.district} · ${c.builtYear}년 · ${c.households.toLocaleString()}세대</div>
           </td>
@@ -972,19 +1376,20 @@ const RE_APP = {
       const isSel = c.id === this.selectedId;
       const shortName = c.name.length > 10 ? c.name.slice(0, 10) + '…' : c.name;
       const html = `
-        <div class="apt-marker-bubble ${isSel ? 'selected' : ''} ${m.dropPct <= -20 ? 'undervalued' : ''}">
+        <div class="apt-marker-bubble ${isSel ? 'selected' : ''} ${m.dropPct <= -20 ? 'undervalued' : ''} ${this.auctionPillFor ? (this.auctionPillFor(c) ? 'has-auction' : '') : ''}">
           <div class="apt-marker-name">${shortName}</div>
           <div>
             <span class="apt-marker-price">${m.recentSale.toFixed(2)}억</span>
             <span class="apt-marker-gap">갭 ${m.gap.toFixed(2)}억</span>
           </div>
+          ${this.auctionPillFor ? this.auctionPillFor(c) : ''}
         </div>
       `;
       const icon = L.divIcon({
         className: 'custom-apt-icon',
         html,
-        iconSize: [110, 38],
-        iconAnchor: [55, 19]
+        iconSize: [150, 52],
+        iconAnchor: [75, 26]
       });
       const marker = L.marker([c.lat, c.lng], { icon }).addTo(this.map);
       marker.on('click', () => this.selectComplex(c.id, true));
@@ -1273,9 +1678,11 @@ const RE_APP = {
 
   switchSubTab(tabName) {
     document.querySelectorAll('.subtab-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.getAttribute('data-tab') === tabName);
+      const on = btn.getAttribute('data-tab') === tabName;
+      btn.classList.toggle('active', on && tabName !== 'auction-cfo');
+      btn.classList.toggle('active-auction-tab', on && tabName === 'auction-cfo');
     });
-    ['cfo', 'tx', 'notes'].forEach(t => {
+    ['cfo', 'auction-cfo', 'tx', 'notes'].forEach(t => {
       const el = document.getElementById(`subtab-${t}`);
       if (el) el.style.display = t === tabName ? 'block' : 'none';
     });
@@ -1384,7 +1791,8 @@ const RE_APP = {
     const payload = {
       exportedAt: '2026-10-26 KST',
       watchlist: this.watchlist,
-      notes: this.notes
+      notes: this.notes,
+      customAuctions: this.customAuctions || []
     };
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
     const a = document.createElement('a');
@@ -1402,6 +1810,7 @@ const RE_APP = {
         const data = JSON.parse(e.target.result);
         if (Array.isArray(data.watchlist)) this.watchlist = data.watchlist;
         if (data.notes) this.notes = data.notes;
+        if (Array.isArray(data.customAuctions)) { this.customAuctions = data.customAuctions; localStorage.setItem('re_radar_custom_auctions', JSON.stringify(this.customAuctions)); this.buildAuctionList && this.buildAuctionList(); }
         localStorage.setItem('re_radar_watchlist', JSON.stringify(this.watchlist));
         localStorage.setItem('re_radar_notes', JSON.stringify(this.notes));
         this.applyFilters();
@@ -1524,6 +1933,375 @@ const RE_APP = {
       `• 강점: ${cur.pros}`;
   }
 };
+
+
+
+/* =====================================================================
+ * v2.0 — 실전 경매·공매 스캐너 + 욘두(CFO) 경매 낙찰가·경락잔금·안전마진 시뮬레이터
+ * ===================================================================== */
+const AUCTION_SEED = [
+  { id:'auc-lu1-sk1', caseNo:'2026타경10482 (인천지법 본원 4계)', court:'인천지법(서구·연수·부평)', type:'법원경매', complexId:'lu1-sk1', area:'84㎡', floorInfo:'104동 18층', appraisedPrice:7.50, minBidPrice:5.25, failCount:'1회 유찰 (70%)', auctionDate:'2026-11-12', rightsSummary:'말소기준권리 이후 임차인 없음 (안전)', isSafeRights:true, unpaidFeeEst:140, evictionCostEst:350, assumedDeposit:0, evictionDifficulty:'하 (공실/소유자 점유)' },
+  { id:'auc-lu1-forena', caseNo:'2026타경11209 (인천지법 본원 7계)', court:'인천지법(서구·연수·부평)', type:'법원경매', complexId:'lu1-forena', area:'84㎡', floorInfo:'203동 14층', appraisedPrice:6.90, minBidPrice:4.83, failCount:'1회 유찰 (70%)', auctionDate:'2026-11-17', rightsSummary:'대항력 임차인 배당요구 완료 (인수금 0원)', isSafeRights:true, unpaidFeeEst:120, evictionCostEst:350, assumedDeposit:0, evictionDifficulty:'중 (일반 임차인)' },
+  { id:'auc-lu1-gwell', caseNo:'2026타경8817 (인천지법 본원 3계)', court:'인천지법(서구·연수·부평)', type:'법원경매', complexId:'lu1-gwell', area:'59㎡', floorInfo:'105동 9층', appraisedPrice:5.20, minBidPrice:2.55, failCount:'2회 유찰 (49%)', auctionDate:'2026-11-05', rightsSummary:'선순위 전세권 주의 (인수 가능성 확인)', isSafeRights:false, unpaidFeeEst:210, evictionCostEst:500, assumedDeposit:22000, evictionDifficulty:'상 (선순위 권리 확인)' },
+  { id:'auc-cheongna-sujain', caseNo:'2026-08412-001 (캠코 온비드 압류재산)', court:'인천지법(서구·연수·부평)', type:'온비드공매', complexId:'cheongna-sujain', area:'84㎡', floorInfo:'302동 22층', appraisedPrice:9.20, minBidPrice:7.36, failCount:'2회 유찰 (80%)', auctionDate:'2026-11-09', rightsSummary:'말소기준권리 이후 임차인 없음 (안전)', isSafeRights:true, unpaidFeeEst:180, evictionCostEst:400, assumedDeposit:0, evictionDifficulty:'하 (공실/소유자 점유)' },
+  { id:'auc-cheongna-prugio', caseNo:'2026타경12655 (인천지법 본원 9계)', court:'인천지법(서구·연수·부평)', type:'법원경매', complexId:'cheongna-prugio', area:'84㎡', floorInfo:'112동 7층', appraisedPrice:8.60, minBidPrice:6.02, failCount:'1회 유찰 (70%)', auctionDate:'2026-11-26', rightsSummary:'대항력 임차인 배당요구 완료 (인수금 0원)', isSafeRights:true, unpaidFeeEst:160, evictionCostEst:400, assumedDeposit:0, evictionDifficulty:'중 (일반 임차인)' },
+  { id:'auc-geomdan-kumho', caseNo:'2026타경9831 (인천지법 본원 2계)', court:'인천지법(서구·연수·부평)', type:'법원경매', complexId:'geomdan-kumho', area:'84㎡', floorInfo:'107동 19층', appraisedPrice:7.30, minBidPrice:5.11, failCount:'1회 유찰 (70%)', auctionDate:'2026-11-19', rightsSummary:'말소기준권리 이후 임차인 없음 (안전)', isSafeRights:true, unpaidFeeEst:110, evictionCostEst:300, assumedDeposit:0, evictionDifficulty:'하 (공실/소유자 점유)' },
+  { id:'auc-songdo-firstpark', caseNo:'2026타경14502 (인천지법 본원 11계)', court:'인천지법(서구·연수·부평)', type:'법원경매', complexId:'songdo-firstpark', area:'84㎡', floorInfo:'1504동 27층', appraisedPrice:11.00, minBidPrice:7.70, failCount:'1회 유찰 (70%)', auctionDate:'2026-11-24', rightsSummary:'대항력 임차인 배당요구 완료 (인수금 0원)', isSafeRights:true, unpaidFeeEst:210, evictionCostEst:450, assumedDeposit:0, evictionDifficulty:'중 (일반 임차인)' },
+  { id:'auc-songdo-marinabay', caseNo:'2026-09107-002 (캠코 온비드 국세압류)', court:'인천지법(서구·연수·부평)', type:'온비드공매', complexId:'songdo-marinabay', area:'84㎡', floorInfo:'103동 31층', appraisedPrice:7.40, minBidPrice:5.18, failCount:'3회 유찰 (70%)', auctionDate:'2026-11-16', rightsSummary:'말소기준권리 이후 임차인 없음 (안전)', isSafeRights:true, unpaidFeeEst:130, evictionCostEst:300, assumedDeposit:0, evictionDifficulty:'하 (공실/소유자 점유)' },
+  { id:'auc-bupyeong-skview', caseNo:'2026타경7044 (인천지법 본원 6계)', court:'인천지법(서구·연수·부평)', type:'법원경매', complexId:'bupyeong-skview', area:'84㎡', floorInfo:'110동 12층', appraisedPrice:6.70, minBidPrice:4.69, failCount:'1회 유찰 (70%)', auctionDate:'2026-12-01', rightsSummary:'유치권 신고 있음 (성립 여부 확인)', isSafeRights:false, unpaidFeeEst:260, evictionCostEst:600, assumedDeposit:0, evictionDifficulty:'상 (선순위 권리 확인)' },
+  { id:'auc-mapo-rapu', caseNo:'2026타경102233 (서울서부지법 1계)', court:'서울중앙·남부·서부', type:'법원경매', complexId:'mapo-rapu', area:'84㎡', floorInfo:'118동 11층', appraisedPrice:21.50, minBidPrice:17.20, failCount:'1회 유찰 (80%)', auctionDate:'2026-11-18', rightsSummary:'말소기준권리 이후 임차인 없음 (안전)', isSafeRights:true, unpaidFeeEst:320, evictionCostEst:500, assumedDeposit:0, evictionDifficulty:'하 (공실/소유자 점유)' },
+  { id:'auc-songpa-helio', caseNo:'2026타경110582 (서울동부지법 3계)', court:'서울중앙·남부·서부', type:'법원경매', complexId:'songpa-heliocity', area:'84㎡', floorInfo:'931동 15층', appraisedPrice:24.00, minBidPrice:19.20, failCount:'1회 유찰 (80%)', auctionDate:'2026-11-25', rightsSummary:'대항력 임차인 배당요구 완료 (인수금 0원)', isSafeRights:true, unpaidFeeEst:280, evictionCostEst:500, assumedDeposit:0, evictionDifficulty:'중 (일반 임차인)' },
+  { id:'auc-nowon-forena', caseNo:'2026타경5321 (서울북부지법 2계)', court:'서울중앙·남부·서부', type:'법원경매', complexId:'nowon-forena', area:'84㎡', floorInfo:'102동 8층', appraisedPrice:11.80, minBidPrice:9.44, failCount:'1회 유찰 (80%)', auctionDate:'2026-12-03', rightsSummary:'말소기준권리 이후 임차인 없음 (안전)', isSafeRights:true, unpaidFeeEst:150, evictionCostEst:350, assumedDeposit:0, evictionDifficulty:'하 (공실/소유자 점유)' }
+];
+
+Object.assign(RE_APP, {
+  scannerMode: 'normal',
+  auctionFilter: 'ALL',
+  auctions: [],
+  customAuctions: [],
+  selectedAuctionId: 'auc-lu1-sk1',
+
+  areaScale(area) { return area === '59㎡' ? 0.78 : (area === '101㎡+' ? 1.24 : 1.0); },
+  fmtEok(v) { return `${(+v).toFixed(2)}억`; },
+  fmtMan(v) { return `${Math.round(v).toLocaleString()}만원`; },
+
+  buildAuctionList() {
+    const all = [...AUCTION_SEED, ...(this.customAuctions || [])];
+    this.auctions = all.map(a => {
+      const c = this.complexes.find(x => x.id === a.complexId);
+      let mkt = a.currentMarketPrice, js = a.currentJeonsePrice;
+      if (c) {
+        const m = (c.areas && c.areas[a.area]) ? c.areas[a.area] : null;
+        mkt = m ? m.recentSale : +(c.sale84 * this.areaScale(a.area)).toFixed(2);
+        js = m ? m.recentJeonse : +(c.jeonse84 * this.areaScale(a.area)).toFixed(2);
+      }
+      return { ...a, complexName: c ? c.name : (a.complexName || '직접등록 물건'), region: c ? c.region : (a.region || ''), district: c ? c.district : '', currentMarketPrice: mkt, currentJeonsePrice: js, margin: +(mkt - a.minBidPrice).toFixed(2) };
+    });
+  },
+
+  auctionsForComplex(id) { return (this.auctions || []).filter(a => a.complexId === id); },
+
+  auctionPillFor(c) {
+    const list = this.auctionsForComplex(c.id);
+    if (!list.length) return '';
+    const best = list.reduce((p, q) => (q.margin > p.margin ? q : p));
+    return `<div class="apt-marker-auction-pill">🔨 경매 최저가 ${best.minBidPrice.toFixed(2)}억 (시세 대비 -${best.margin.toFixed(2)}억)</div>`;
+  },
+
+  dday(dateStr) {
+    const today = new Date('2026-10-26T00:00:00+09:00');
+    const d = new Date(dateStr + 'T00:00:00+09:00');
+    const n = Math.round((d - today) / 86400000);
+    return n > 0 ? `D-${n}` : (n === 0 ? 'D-Day' : `종료(${-n}일 전)`);
+  },
+
+  setScannerMode(mode) {
+    this.scannerMode = mode;
+    document.getElementById('modeTabNormal').className = 'mode-tab-btn' + (mode === 'normal' ? ' active-normal' : '');
+    document.getElementById('modeTabAuction').className = 'mode-tab-btn' + (mode === 'auction' ? ' active-auction' : '');
+    document.getElementById('normalScannerWrap').style.display = mode === 'normal' ? 'block' : 'none';
+    document.getElementById('auctionScannerWrap').style.display = mode === 'auction' ? 'block' : 'none';
+    if (mode === 'auction') { this.renderAuctionTable(); this.switchSubTab('auction-cfo'); }
+  },
+
+  setAuctionFilter(f) {
+    this.auctionFilter = f;
+    document.querySelectorAll('#auctionCourtChipGroup .court-chip').forEach(b => b.classList.toggle('active', b.getAttribute('data-filter') === f));
+    this.renderAuctionTable();
+  },
+
+  filteredAuctions() {
+    const f = this.auctionFilter;
+    const safeOnly = document.getElementById('onlySafeAuction') && document.getElementById('onlySafeAuction').checked;
+    const region = document.getElementById('regionSelect').value;
+    const kw = (document.getElementById('searchKeyword').value || '').trim().toLowerCase();
+    return this.auctions.filter(a => {
+      if (f !== 'ALL') {
+        if ((f === '법원경매' || f === '온비드공매') ? a.type !== f : a.court !== f) return false;
+      }
+      if (safeOnly && !a.isSafeRights) return false;
+      if (region !== 'ALL' && a.region !== region) return false;
+      if (kw && !`${a.caseNo} ${a.complexName} ${a.district}`.toLowerCase().includes(kw)) return false;
+      return true;
+    }).sort((x, y) => y.margin - x.margin);
+  },
+
+  rightsBadge(a) {
+    const cls = a.isSafeRights ? 'pill-sage' : 'pill-rose';
+    return `<span class="${cls}" style="font-size:10.5px;">${a.isSafeRights ? '🟢' : '🔴'} ${a.rightsSummary}</span>`;
+  },
+
+  renderAuctionTable() {
+    const tbody = document.getElementById('auctionTableBody');
+    if (!tbody) return;
+    const list = this.filteredAuctions();
+    if (!list.length) {
+      tbody.innerHTML = `<tr><td colspan="8" style="text-align:center;color:var(--text-muted);padding:18px;">조건에 맞는 경매·공매 물건이 없습니다. <strong>＋ 사건번호 직접 등록</strong>으로 추가해 보세요.</td></tr>`;
+      return;
+    }
+    tbody.innerHTML = list.map(a => {
+      const sel = a.id === this.selectedAuctionId;
+      const pct = ((a.margin / a.currentMarketPrice) * 100).toFixed(1);
+      const courtUrl = 'https://www.courtauction.go.kr/pgj/index.on';
+      const onbidUrl = 'https://www.onbid.co.kr/op/dsa/main/main.do';
+      const naver = `https://new.land.naver.com/search?sk=${encodeURIComponent(a.complexName)}`;
+      return `
+        <tr class="${sel ? 'active-auction-row' : ''}" onclick="RE_APP.selectAuctionItem('${a.id}', true)">
+          <td>
+            <div class="apt-cell-title"><span class="${a.type === '법원경매' ? 'pill-amber' : 'pill-navy'}" style="font-size:9.5px;">${a.type === '법원경매' ? '⚖️ 법원경매' : '🏛️ 온비드'}</span></div>
+            <div style="font-weight:800;margin-top:2px;">${a.caseNo.split(' (')[0]}</div>
+            <div class="apt-cell-sub">${(a.caseNo.split(' (')[1] || '').replace(')', '')}</div>
+          </td>
+          <td style="text-align:left;"><strong>${a.complexName}</strong><div class="apt-cell-sub">${a.floorInfo} · ${a.area} · ${a.evictionDifficulty}</div></td>
+          <td>${this.fmtEok(a.appraisedPrice)}</td>
+          <td><strong style="color:var(--terracotta);">${this.fmtEok(a.minBidPrice)}</strong><div class="apt-cell-sub">${a.failCount}</div></td>
+          <td><strong>${this.fmtEok(a.currentMarketPrice)}</strong><div class="apt-cell-sub">전세 ${this.fmtEok(a.currentJeonsePrice)}</div></td>
+          <td><strong style="color:${a.margin > 0 ? 'var(--sage)' : 'var(--rose)'};">${a.margin >= 0 ? '+' : ''}${a.margin.toFixed(2)}억</strong><div class="apt-cell-sub">시세 대비 -${pct}%</div></td>
+          <td style="text-align:left;white-space:normal;max-width:190px;">${this.rightsBadge(a)}<div class="apt-cell-sub">미납관리비 약 ${a.unpaidFeeEst}만원${a.assumedDeposit ? ` · 인수 ${a.assumedDeposit.toLocaleString()}만원` : ''}</div></td>
+          <td>
+            <div><strong>${a.auctionDate.slice(5)}</strong> <span class="pill-amber" style="font-size:9.5px;">${this.dday(a.auctionDate)}</span></div>
+            <div style="display:flex;gap:3px;justify-content:flex-end;margin-top:3px;">
+              <a href="${a.type === '법원경매' ? courtUrl : onbidUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation()" class="pill-navy" style="text-decoration:none;font-size:9.5px;">${a.type === '법원경매' ? '대법원' : '온비드'}</a>
+              <a href="${naver}" target="_blank" rel="noopener" onclick="event.stopPropagation()" class="pill-sage" style="text-decoration:none;font-size:9.5px;">네이버</a>
+            </div>
+          </td>
+        </tr>`;
+    }).join('');
+  },
+
+  populateAuctionSelect() {
+    const sel = document.getElementById('aucCaseSelect');
+    if (!sel) return;
+    sel.innerHTML = this.auctions.map(a => `<option value="${a.id}">${a.caseNo.split(' (')[0]} · ${a.complexName}</option>`).join('');
+    sel.value = this.selectedAuctionId;
+  },
+
+  selectAuctionItem(id, fromTable) {
+    const a = this.auctions.find(x => x.id === id);
+    if (!a) return;
+    this.selectedAuctionId = id;
+    document.getElementById('aucCalcCaseTitle').textContent = `${a.caseNo} — ${a.complexName} (${a.floorInfo} · ${a.area})`;
+    document.getElementById('aucCaseSelect').value = id;
+    document.getElementById('aucMarketPrice').value = a.currentMarketPrice.toFixed(2);
+    document.getElementById('aucJeonsePrice').value = a.currentJeonsePrice.toFixed(2);
+    document.getElementById('aucAppraisedPrice').value = a.appraisedPrice.toFixed(2);
+    document.getElementById('aucMinBidPrice').value = a.minBidPrice.toFixed(2);
+    document.getElementById('aucEvictionCost').value = a.evictionCostEst || 350;
+    document.getElementById('aucUnpaidFee').value = a.unpaidFeeEst || 150;
+    document.getElementById('aucAssumedDeposit').value = a.assumedDeposit || 0;
+    // default bid: min bid + 40% of (market-min) gap, rounded to 100만원
+    const bidMan = Math.round((a.minBidPrice + (a.currentMarketPrice - a.minBidPrice) * 0.35) * 100) * 100;
+    const slider = document.getElementById('aucBidSlider');
+    slider.min = Math.round(a.minBidPrice * 10000);
+    slider.max = Math.round(Math.max(a.appraisedPrice, a.currentMarketPrice) * 10000);
+    slider.value = bidMan;
+    document.getElementById('aucBidManInput').value = bidMan;
+    if (fromTable && a.complexId && this.complexes.find(c => c.id === a.complexId)) {
+      this.selectComplex(a.complexId, true);
+    }
+    this.switchSubTab('auction-cfo');
+    this.renderAuctionTable();
+    this.runAuctionCalculator();
+  },
+
+  syncBidFromSlider() { document.getElementById('aucBidManInput').value = document.getElementById('aucBidSlider').value; this.runAuctionCalculator(); },
+  syncBidFromInput() { document.getElementById('aucBidSlider').value = document.getElementById('aucBidManInput').value; this.runAuctionCalculator(); },
+
+  auctionAcqRate(bidEok, houseCnt) {
+    if (houseCnt === '2_adj') return 0.084;
+    if (houseCnt === '3_plus') return 0.124;
+    if (bidEok <= 6) return 0.011;
+    if (bidEok <= 9) return (((bidEok * 2 / 3) - 3) / 100) * 1.1;
+    return 0.033;
+  },
+
+  runAuctionCalculator() {
+    const g = id => parseFloat(document.getElementById(id).value) || 0;
+    const mkt = g('aucMarketPrice'), js = g('aucJeonsePrice'), appr = g('aucAppraisedPrice'), minBid = g('aucMinBidPrice');
+    const bidMan = g('aucBidManInput'), bidEok = bidMan / 10000;
+    const evict = g('aucEvictionCost'), unpaid = g('aucUnpaidFee'), deposit = g('aucAssumedDeposit'), legal = g('aucLegalFee');
+    const rate = g('aucLoanRate') || 4.2;
+    const houseCnt = document.getElementById('aucHouseCount').value;
+    const rule = document.getElementById('aucLoanRule').value;
+
+    document.getElementById('aucBidEokLabel').textContent = `${bidEok.toFixed(2)}억`;
+    document.getElementById('aucBidVsAppraisedBadge').textContent = `감정가 대비 낙찰가율 ${appr ? (bidEok / appr * 100).toFixed(1) : '-'}%`;
+    document.getElementById('aucBidVsMarketBadge').textContent = `실거래 시세 대비 ${mkt ? (bidEok / mkt * 100).toFixed(1) : '-'}%`;
+    document.getElementById('aucSliderMinTxt').textContent = `최저입찰가: ${Math.round(minBid * 10000).toLocaleString()}만원 (${minBid.toFixed(2)}억)`;
+    document.getElementById('aucSliderMarketTxt').textContent = `현재 실거래 시세: ${Math.round(mkt * 10000).toLocaleString()}만원 (${mkt.toFixed(2)}억)`;
+    document.getElementById('aucSliderMaxTxt').textContent = `감정가: ${Math.round(appr * 10000).toLocaleString()}만원 (${appr.toFixed(2)}억)`;
+
+    const acqRate = this.auctionAcqRate(bidEok, houseCnt);
+    const acqMan = Math.round(bidMan * acqRate);
+    const bidDepositMan = Math.round(minBid * 10000 * 0.1);
+    let loanMan = 0, leverLabel = '';
+    if (rule === 'std') { loanMan = Math.min(appr * 10000 * 0.7, bidMan * 0.8); leverLabel = '경락잔금대출 min(감정 70%, 낙찰 80%)'; }
+    else if (rule === 'dsr70') { loanMan = bidMan * 0.7; leverLabel = '경락잔금대출 낙찰가 70%'; }
+    else if (rule === 'dsr60') { loanMan = bidMan * 0.6; leverLabel = '경락잔금대출 낙찰가 60%'; }
+    else { loanMan = js * 10000; leverLabel = '전세 세팅 (임차보증금 레버리지)'; }
+    loanMan = Math.round(loanMan);
+
+    const totalCostMan = bidMan + acqMan + evict + unpaid + deposit + legal; // 중개보수 0원
+    const equityMan = Math.max(0, totalCostMan - loanMan);
+    const marginMan = Math.round(mkt * 10000 - totalCostMan);
+    const discountPct = mkt ? (marginMan / (mkt * 10000)) * 100 : 0;
+
+    // 목표 매도: 현재 시세 기준 2년 보유, 2년 이자 비용, 양도세 단순 추정(일반과세 2년 이상 보유 기본세율 근사 22% · 1주택 비과세는 미반영)
+    const interestMan = rule === 'jeonse' ? 0 : Math.round(loanMan * rate / 100 * 2);
+    const grossGainMan = Math.round(mkt * 10000 - totalCostMan) - interestMan;
+    const taxMan = grossGainMan > 0 ? Math.round(grossGainMan * 0.22) : 0;
+    const netMan = grossGainMan - taxMan;
+    const roe = equityMan > 0 ? (netMan / equityMan) * 100 : 0;
+
+    let cls = 'verdict-good', verdict;
+    if (discountPct >= 8) verdict = `🟢 안전마진 +${marginMan.toLocaleString()}만원 확보 (시세 대비 ${discountPct.toFixed(1)}% 할인 · 입찰 적격)`;
+    else if (discountPct >= 3) { cls = 'verdict-warn'; verdict = `🟠 마진 얇음 (+${marginMan.toLocaleString()}만원 · ${discountPct.toFixed(1)}%) — 급매 실거래가와 비교 후 입찰가 하향 검토`; }
+    else { cls = 'verdict-danger'; verdict = `🔴 고가낙찰 주의 (명도비·취득세 포함 시 실거래가와 차이 ${discountPct.toFixed(1)}% — 3% 미만)`; }
+
+    const a = this.auctions.find(x => x.id === this.selectedAuctionId);
+    const riskNote = a && !a.isSafeRights ? `<div class="cfo-verdict-banner verdict-danger" style="margin-top:6px;font-size:11.5px;">⚠️ 권리 리스크: ${a.rightsSummary} — 인수보증금·유치권 금액을 반드시 매각물건명세서로 확인하세요.</div>` : '';
+
+    document.getElementById('auctionCfoOutputWrap').innerHTML = `
+      <div class="auc-kpi-4grid">
+        <div class="auc-kpi-box"><div class="auc-kpi-title">① 입찰 당일 필요 현금 (입찰보증금 = 최저가 10%)</div><div class="auc-kpi-num" style="color:var(--terracotta);">${bidDepositMan.toLocaleString()}만원</div><div class="auc-kpi-desc">자기앞수표 1장 준비 · 패찰 시 당일 반환</div></div>
+        <div class="auc-kpi-box"><div class="auc-kpi-title">② 낙찰 후 실투입 자기자본</div><div class="auc-kpi-num" style="color:var(--navy);">${equityMan.toLocaleString()}만원</div><div class="auc-kpi-desc">총 취득원가 ${totalCostMan.toLocaleString()}만 − ${leverLabel} ${loanMan.toLocaleString()}만</div></div>
+        <div class="auc-kpi-box"><div class="auc-kpi-title">③ 즉시 안전마진 (실거래 시세 − 총 취득원가)</div><div class="auc-kpi-num" style="color:${marginMan >= 0 ? 'var(--sage)' : 'var(--rose)'};">${marginMan >= 0 ? '+' : ''}${marginMan.toLocaleString()}만원</div><div class="auc-kpi-desc">시세 대비 할인율 ${discountPct.toFixed(1)}% · 취득세 ${(acqRate * 100).toFixed(2)}% ${acqMan.toLocaleString()}만 · 중개보수 0원</div></div>
+        <div class="auc-kpi-box"><div class="auc-kpi-title">④ 시세 매도 시 세후 순수익 & ROE (2년 보유)</div><div class="auc-kpi-num" style="color:${netMan >= 0 ? 'var(--sage)' : 'var(--rose)'};">${netMan >= 0 ? '+' : ''}${netMan.toLocaleString()}만원 · ROE ${roe.toFixed(1)}%</div><div class="auc-kpi-desc">이자 ${interestMan.toLocaleString()}만 · 양도세 추정 ${taxMan.toLocaleString()}만 (22% 근사)</div></div>
+      </div>
+      <div class="cfo-row" style="margin-top:8px;"><span>부대비용 내역: 명도비 ${evict}만 · 미납관리비 ${unpaid}만 · 인수보증금 ${deposit.toLocaleString()}만 · 법무사·등기 ${legal}만</span><strong>합계 ${(evict + unpaid + deposit + legal + acqMan).toLocaleString()}만원</strong></div>
+      <div class="cfo-verdict-banner ${cls}"><span>욘두 CFO 판정</span><span>${verdict}</span></div>
+      ${riskNote}`;
+  },
+
+  openAuctionAddModal() {
+    const sel = document.getElementById('newAucComplexId');
+    sel.innerHTML = this.complexes.map(c => `<option value="${c.id}">${c.name} (${c.region.split('(')[0]})</option>`).join('');
+    sel.value = this.selectedId;
+    document.getElementById('auctionAddModal').classList.add('open');
+  },
+  closeAuctionAddModal() { document.getElementById('auctionAddModal').classList.remove('open'); },
+  onNewAuctionComplexChange() {
+    const c = this.complexes.find(x => x.id === document.getElementById('newAucComplexId').value);
+    if (!c) return;
+    document.getElementById('newAucAppraised').value = (c.sale84 * 1.02).toFixed(2);
+    document.getElementById('newAucMinBid').value = (c.sale84 * 1.02 * 0.7).toFixed(2);
+  },
+  saveCustomAuctionItem() {
+    const v = id => document.getElementById(id).value;
+    const item = {
+      id: 'custom-' + Date.now(), caseNo: v('newAucCaseNo'), court: v('newAucCourt'), type: v('newAucType'),
+      complexId: v('newAucComplexId'), area: v('newAucArea'), floorInfo: v('newAucFloor'),
+      appraisedPrice: parseFloat(v('newAucAppraised')) || 0, minBidPrice: parseFloat(v('newAucMinBid')) || 0,
+      failCount: v('newAucFailCount'), auctionDate: v('newAucDate') || '2026-11-30', rightsSummary: v('newAucRights'),
+      isSafeRights: !/주의|선순위|유치권|인수 가능/.test(v('newAucRights')),
+      unpaidFeeEst: +v('newAucUnpaid') || 0, evictionCostEst: +v('newAucEviction') || 0,
+      assumedDeposit: +v('newAucDeposit') || 0, evictionDifficulty: v('newAucDiff'), custom: true
+    };
+    this.customAuctions.push(item);
+    localStorage.setItem('re_radar_custom_auctions', JSON.stringify(this.customAuctions));
+    this.buildAuctionList();
+    this.populateAuctionSelect();
+    this.closeAuctionAddModal();
+    this.setScannerMode('auction');
+    this.renderMarkers();
+    this.selectAuctionItem(item.id, true);
+  },
+
+  async fetchLiveAuctionProxy() {
+    const box = document.getElementById('apiTestResult');
+    const court = (document.getElementById('auctionProxyCourtSelect') || {}).value || 'ALL';
+    try {
+      const qs = new URLSearchParams({ court, serviceKey: this.molitKey || 'DEMO' });
+      const res = await fetch(`/api/auction?${qs.toString()}`);
+      const json = await res.json();
+      box.innerHTML = `• <strong>2. 캠코(온비드) 공매 / 법원경매 프록시 (<code>/api/auction</code>)</strong>: ✅ ${json.mode} · ${json.count}건 수신<br>` +
+        (json.items || []).slice(0, 4).map(it => `&nbsp;&nbsp;- ${it.caseNo} ${it.complexName}: 최저 ${it.minBidPrice}억 (${it.failCount})`).join('<br>');
+    } catch (e) {
+      box.innerHTML = `• <strong>2. 경매·공매 프록시 (<code>/api/auction</code>)</strong>: 로컬 단일 파일 실행 중 → 내장 경매 시드 ${this.auctions.length}건 사용 (Vercel 배포 URL에서 프록시 작동)`;
+    }
+  }
+});
+
+// ---- wrap existing methods ----
+(() => {
+  const origInit = RE_APP.init.bind(RE_APP);
+  RE_APP.init = async function () {
+    try { this.customAuctions = JSON.parse(localStorage.getItem('re_radar_custom_auctions') || '[]'); } catch (e) { this.customAuctions = []; }
+    if (window.__SEED_DATA__ && Array.isArray(window.__SEED_DATA__.complexes)) {
+      this.complexes = window.__SEED_DATA__.complexes;
+      this.buildAuctionList();
+    }
+    await origInit();
+    if (!this.auctions.length) this.buildAuctionList();
+    this.populateAuctionSelect();
+    this.renderMarkers();
+    this.renderTable();
+    this.renderAuctionTable();
+    this.selectAuctionItem(this.selectedAuctionId, false);
+    this.switchSubTab('cfo');
+    const p = new URLSearchParams(location.search);
+    if (p.get('mode') === 'auction') this.setScannerMode('auction');
+  };
+
+  const origKpi = RE_APP.updateKpis.bind(RE_APP);
+  RE_APP.updateKpis = function (region) {
+    origKpi(region);
+    if (!this.auctions || !this.auctions.length) return;
+    const list = this.auctions.filter(a => region === 'ALL' || a.region === region);
+    const base = list.length ? list : this.auctions;
+    const avgDisc = base.reduce((s, a) => s + (a.minBidPrice / a.currentMarketPrice - 1) * 100, 0) / base.length;
+    const avgMargin = base.reduce((s, a) => s + a.margin, 0) / base.length;
+    document.getElementById('kpiAuctionCountBadge').textContent = `🔨 경매·공매 ${list.length}건 진행`;
+    document.getElementById('kpiAvgDrop').textContent = `${avgDisc.toFixed(1)}%`;
+    document.getElementById('kpiUndervaluedCnt').textContent = `평균 안전마진 +${avgMargin.toFixed(2)}억`;
+    const best = [...base].filter(a => a.isSafeRights).sort((x, y) => (y.margin / y.currentMarketPrice) - (x.margin / x.currentMarketPrice))[0];
+    if (best) {
+      document.getElementById('kpiTopPickName').textContent = best.complexName;
+      document.getElementById('kpiTopPickMeta').textContent = `경매 최저 ${best.minBidPrice.toFixed(2)}억 (시세 -${best.margin.toFixed(2)}억)`;
+    }
+  };
+
+  const origFilters = RE_APP.applyFilters.bind(RE_APP);
+  RE_APP.applyFilters = function () {
+    origFilters();
+    if (this.auctions && this.auctions.length) this.renderAuctionTable();
+  };
+
+  const origSelect = RE_APP.selectComplex.bind(RE_APP);
+  RE_APP.selectComplex = function (id, pan) {
+    origSelect(id, pan);
+    const badge = document.getElementById('detailAuctionAlertBadge');
+    const list = this.auctionsForComplex ? this.auctionsForComplex(this.selectedId) : [];
+    if (badge) {
+      badge.style.display = list.length ? 'inline-block' : 'none';
+      if (list.length) badge.textContent = `🔨 경매 ${list.length}건 진행중 · 최저 ${list[0].minBidPrice.toFixed(2)}억 (클릭 시 낙찰가 계산)`;
+    }
+  };
+
+  const origReply = RE_APP.buildAiReply.bind(RE_APP);
+  RE_APP.buildAiReply = function (q) {
+    if (q.includes('경매') || q.includes('공매') || q.includes('안전마진')) {
+      const picks = this.auctions
+        .filter(a => (a.region || '').includes('인천 서구') || !q.includes('서구'))
+        .filter(a => a.isSafeRights)
+        .sort((x, y) => (y.margin / y.currentMarketPrice) - (x.margin / x.currentMarketPrice)).slice(0, 4);
+      return `<strong>🔨 인천 서구·청라 권역 시세 대비 안전마진 TOP ${picks.length} (권리 안전물건)</strong><br>` +
+        picks.map(a => `• <strong>${a.complexName}</strong> ${a.floorInfo} — ${a.caseNo.split(' (')[0]}: 최저 ${a.minBidPrice.toFixed(2)}억 vs 실거래 ${a.currentMarketPrice.toFixed(2)}억 → <strong>+${a.margin.toFixed(2)}억</strong> (${a.failCount}, 매각 ${a.auctionDate} ${this.dday(a.auctionDate)})`).join('<br>') +
+        `<br><br>💡 욘두 팁: 최저가가 아닌 <strong>실거래 시세의 82~88%</strong> 선에서 입찰가를 잡아야 명도비·취득세 포함 후에도 8% 이상 마진이 남습니다. 행을 클릭하면 계산기에 자동 로드됩니다.`;
+    }
+    if (q.includes('대항력') || q.includes('권리분석') || q.includes('임차인')) {
+      return `<strong>⚖️ 대항력 있는 임차인 권리분석 핵심 체크포인트</strong><br>` +
+        `1. <strong>말소기준권리</strong>(최선순위 근저당·가압류·담보가등기·경매개시결정 등기) 날짜를 먼저 확인<br>` +
+        `2. 임차인 <strong>전입일 + 점유</strong>가 말소기준권리보다 빠르면 → 대항력 有 (전입 다음날 0시 효력)<br>` +
+        `3. 대항력 임차인이 <strong>배당요구종기 내 배당요구</strong>했는지 확인 — 미배당분은 낙찰자가 인수<br>` +
+        `4. 확정일자 순위로 <strong>전액 배당 가능한지</strong> 배당표 시뮬레이션 (부족분 = 인수금)<br>` +
+        `5. <strong>매각물건명세서·현황조사서·전입세대열람</strong> 3종 교차 확인, 임차권등기·전세권 여부 체크<br>` +
+        `6. 선순위 전세권은 배당요구 시 소멸, 미요구 시 인수 → 계산기 '인수 보증금'에 반영하세요.<br>` +
+        `⚠️ 최종 판단 전 법무사·변호사 검토를 권장합니다.`;
+    }
+    return origReply(q);
+  };
+})();
 
 window.addEventListener('DOMContentLoaded', () => RE_APP.init());
 
