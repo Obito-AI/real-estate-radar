@@ -354,7 +354,138 @@
       "roadAddr": "인천광역시 서구 봉오재3로 103 (가정로 437)",
       "jibunAddr": "인천광역시 서구 가정동 645",
       "lastDate": "2026-09-18",
-      "lastFloor": "24층"
+      "lastFloor": "24층",
+      "naverComplexNo": "124735",
+      "naverSaleRecent": {
+        "price": 7.35,
+        "date": "2026-09-18",
+        "floor": "24층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 7.1,
+      "naverAskingSaleMax": 8.3,
+      "naverSaleCount": 54,
+      "naverAskingJeonseMin": 4.2,
+      "naverJeonseCount": 12,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 5.65,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 5.54,
+          "askingSaleMax": 6.56,
+          "saleCount": 18,
+          "recentJeonse": 3.45,
+          "askingJeonseMin": 3.36,
+          "jeonseCount": 4
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 7.35,
+          "recentSaleDate": "2026-09-18",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 7.1,
+          "askingSaleMax": 8.3,
+          "saleCount": 54,
+          "recentJeonse": 4.2,
+          "askingJeonseMin": 4.2,
+          "jeonseCount": 12
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 7.2,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 6.92,
+          "askingSaleMax": 8.13,
+          "saleCount": 24,
+          "recentJeonse": 4.12,
+          "askingJeonseMin": 4.12,
+          "jeonseCount": 6
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 8.97,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 8.59,
+          "askingSaleMax": 10.21,
+          "saleCount": 11,
+          "recentJeonse": 5.04,
+          "askingJeonseMin": 5.0,
+          "jeonseCount": 3
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-09-18",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 7.35,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 4.2,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 5.65,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 7.2,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 3.45,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 8.97,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "lu1-sk2",
@@ -707,7 +838,138 @@
       "roadAddr": "인천광역시 서구 봉오재1로 120",
       "jibunAddr": "인천광역시 서구 가정동 631",
       "lastDate": "2026-09-14",
-      "lastFloor": "19층"
+      "lastFloor": "19층",
+      "naverComplexNo": "129041",
+      "naverSaleRecent": {
+        "price": 6.65,
+        "date": "2026-09-14",
+        "floor": "19층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 6.45,
+      "naverAskingSaleMax": 7.6,
+      "naverSaleCount": 46,
+      "naverAskingJeonseMin": 3.8,
+      "naverJeonseCount": 9,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 5.2,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 5.03,
+          "askingSaleMax": 6.0,
+          "saleCount": 16,
+          "recentJeonse": 3.2,
+          "askingJeonseMin": 3.04,
+          "jeonseCount": 3
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 6.65,
+          "recentSaleDate": "2026-09-14",
+          "recentSaleFloor": "19층",
+          "askingSaleMin": 6.45,
+          "askingSaleMax": 7.6,
+          "saleCount": 46,
+          "recentJeonse": 3.8,
+          "askingJeonseMin": 3.8,
+          "jeonseCount": 9
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 6.52,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 6.29,
+          "askingSaleMax": 7.45,
+          "saleCount": 20,
+          "recentJeonse": 3.72,
+          "askingJeonseMin": 3.72,
+          "jeonseCount": 4
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 8.11,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 7.8,
+          "askingSaleMax": 9.35,
+          "saleCount": 10,
+          "recentJeonse": 4.56,
+          "askingJeonseMin": 4.52,
+          "jeonseCount": 2
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-09-14",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 6.65,
+          "floor": "19층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 3.8,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 5.2,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 6.52,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 3.2,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 8.11,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "lu1-forena",
@@ -1060,7 +1322,138 @@
       "roadAddr": "인천광역시 서구 봉오재2로 37",
       "jibunAddr": "인천광역시 서구 가정동 610-3",
       "lastDate": "2026-10-07",
-      "lastFloor": "21층"
+      "lastFloor": "21층",
+      "naverComplexNo": "131482",
+      "naverSaleRecent": {
+        "price": 5.9,
+        "date": "2026-10-07",
+        "floor": "21층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 5.8,
+      "naverAskingSaleMax": 6.7,
+      "naverSaleCount": 38,
+      "naverAskingJeonseMin": 3.85,
+      "naverJeonseCount": 7,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 5.1,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 4.52,
+          "askingSaleMax": 5.29,
+          "saleCount": 13,
+          "recentJeonse": 3.2,
+          "askingJeonseMin": 3.08,
+          "jeonseCount": 3
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 5.9,
+          "recentSaleDate": "2026-10-07",
+          "recentSaleFloor": "21층",
+          "askingSaleMin": 5.8,
+          "askingSaleMax": 6.7,
+          "saleCount": 38,
+          "recentJeonse": 3.95,
+          "askingJeonseMin": 3.85,
+          "jeonseCount": 7
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 5.78,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 5.65,
+          "askingSaleMax": 6.57,
+          "saleCount": 17,
+          "recentJeonse": 3.87,
+          "askingJeonseMin": 3.77,
+          "jeonseCount": 4
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 7.2,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 7.02,
+          "askingSaleMax": 8.24,
+          "saleCount": 8,
+          "recentJeonse": 4.74,
+          "askingJeonseMin": 4.58,
+          "jeonseCount": 2
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-10-07",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 5.9,
+          "floor": "21층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 3.95,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 5.1,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 5.78,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 3.2,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 7.2,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "lu1-gwell",
@@ -1413,7 +1806,138 @@
       "roadAddr": "인천광역시 서구 가정로 395",
       "jibunAddr": "인천광역시 서구 가정동 701",
       "lastDate": "2026-09-03",
-      "lastFloor": "20층"
+      "lastFloor": "20층",
+      "naverComplexNo": "128590",
+      "naverSaleRecent": {
+        "price": 6.95,
+        "date": "2026-09-03",
+        "floor": "20층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 6.4,
+      "naverAskingSaleMax": 8.5,
+      "naverSaleCount": 57,
+      "naverAskingJeonseMin": 4.0,
+      "naverJeonseCount": 5,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 5.45,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 4.99,
+          "askingSaleMax": 6.71,
+          "saleCount": 19,
+          "recentJeonse": 3.35,
+          "askingJeonseMin": 3.2,
+          "jeonseCount": 3
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 6.95,
+          "recentSaleDate": "2026-09-03",
+          "recentSaleFloor": "20층",
+          "askingSaleMin": 6.4,
+          "askingSaleMax": 8.5,
+          "saleCount": 57,
+          "recentJeonse": 4.09,
+          "askingJeonseMin": 4.0,
+          "jeonseCount": 5
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 6.81,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 6.24,
+          "askingSaleMax": 8.33,
+          "saleCount": 25,
+          "recentJeonse": 4.01,
+          "askingJeonseMin": 3.92,
+          "jeonseCount": 4
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 8.48,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 7.74,
+          "askingSaleMax": 10.46,
+          "saleCount": 12,
+          "recentJeonse": 4.91,
+          "askingJeonseMin": 4.76,
+          "jeonseCount": 2
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-09-03",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 6.95,
+          "floor": "20층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 4.09,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 5.45,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 6.81,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 3.35,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 8.48,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "lu1-lynn",
@@ -1766,7 +2290,138 @@
       "roadAddr": "인천광역시 서구 봉오재3로 38",
       "jibunAddr": "인천광역시 서구 가정동 710",
       "lastDate": "2026-09-10",
-      "lastFloor": "41층"
+      "lastFloor": "41층",
+      "naverComplexNo": "132819",
+      "naverSaleRecent": {
+        "price": 6.47,
+        "date": "2026-09-10",
+        "floor": "41층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 6.2,
+      "naverAskingSaleMax": 7.2,
+      "naverSaleCount": 59,
+      "naverAskingJeonseMin": 3.8,
+      "naverJeonseCount": 6,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 5.05,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 4.84,
+          "askingSaleMax": 5.69,
+          "saleCount": 20,
+          "recentJeonse": 3.15,
+          "askingJeonseMin": 3.04,
+          "jeonseCount": 3
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 6.47,
+          "recentSaleDate": "2026-09-10",
+          "recentSaleFloor": "41층",
+          "askingSaleMin": 6.2,
+          "askingSaleMax": 7.2,
+          "saleCount": 59,
+          "recentJeonse": 3.9,
+          "askingJeonseMin": 3.8,
+          "jeonseCount": 6
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 6.34,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 6.04,
+          "askingSaleMax": 7.06,
+          "saleCount": 26,
+          "recentJeonse": 3.82,
+          "askingJeonseMin": 3.72,
+          "jeonseCount": 4
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 7.89,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 7.5,
+          "askingSaleMax": 8.86,
+          "saleCount": 12,
+          "recentJeonse": 4.68,
+          "askingJeonseMin": 4.52,
+          "jeonseCount": 2
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 6.47,
+          "floor": "41층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 3.9,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 5.05,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 6.34,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 3.15,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 7.89,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "cheongna-thesharp",
@@ -2119,7 +2774,138 @@
       "roadAddr": "인천광역시 서구 크리스탈로 74",
       "jibunAddr": "인천광역시 서구 청라동 152-2",
       "lastDate": "2026-08-24",
-      "lastFloor": "45층"
+      "lastFloor": "45층",
+      "naverComplexNo": "101842",
+      "naverSaleRecent": {
+        "price": 10.5,
+        "date": "2026-08-24",
+        "floor": "45층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 10.2,
+      "naverAskingSaleMax": 11.8,
+      "naverSaleCount": 31,
+      "naverAskingJeonseMin": 4.5,
+      "naverJeonseCount": 6,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 8.1,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 7.96,
+          "askingSaleMax": 9.32,
+          "saleCount": 10,
+          "recentJeonse": 3.65,
+          "askingJeonseMin": 3.6,
+          "jeonseCount": 3
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 10.5,
+          "recentSaleDate": "2026-08-24",
+          "recentSaleFloor": "45층",
+          "askingSaleMin": 10.2,
+          "askingSaleMax": 11.8,
+          "saleCount": 31,
+          "recentJeonse": 4.5,
+          "askingJeonseMin": 4.5,
+          "jeonseCount": 6
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 10.29,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 9.94,
+          "askingSaleMax": 11.56,
+          "saleCount": 13,
+          "recentJeonse": 4.41,
+          "askingJeonseMin": 4.41,
+          "jeonseCount": 4
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 12.81,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 12.34,
+          "askingSaleMax": 14.51,
+          "saleCount": 6,
+          "recentJeonse": 5.4,
+          "askingJeonseMin": 5.35,
+          "jeonseCount": 2
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-08-24",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 10.5,
+          "floor": "45층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 4.5,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 8.1,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 10.29,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 3.65,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 12.81,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "cheongna-sujain",
@@ -2472,7 +3258,138 @@
       "roadAddr": "인천광역시 서구 청라한내로 132",
       "jibunAddr": "인천광역시 서구 청라동 96-8",
       "lastDate": "2026-10-17",
-      "lastFloor": "31층"
+      "lastFloor": "31층",
+      "naverComplexNo": "111945",
+      "naverSaleRecent": {
+        "price": 8.06,
+        "date": "2026-10-17",
+        "floor": "31층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 7.9,
+      "naverAskingSaleMax": 9.8,
+      "naverSaleCount": 48,
+      "naverAskingJeonseMin": 4.2,
+      "naverJeonseCount": 11,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 6.29,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 6.16,
+          "askingSaleMax": 7.74,
+          "saleCount": 16,
+          "recentJeonse": 3.5,
+          "askingJeonseMin": 3.36,
+          "jeonseCount": 4
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 8.06,
+          "recentSaleDate": "2026-10-17",
+          "recentSaleFloor": "31층",
+          "askingSaleMin": 7.9,
+          "askingSaleMax": 9.8,
+          "saleCount": 48,
+          "recentJeonse": 4.3,
+          "askingJeonseMin": 4.2,
+          "jeonseCount": 11
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 7.9,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 7.7,
+          "askingSaleMax": 9.6,
+          "saleCount": 21,
+          "recentJeonse": 4.21,
+          "askingJeonseMin": 4.12,
+          "jeonseCount": 5
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 9.83,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 9.56,
+          "askingSaleMax": 12.05,
+          "saleCount": 10,
+          "recentJeonse": 5.16,
+          "askingJeonseMin": 5.0,
+          "jeonseCount": 2
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-10-17",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 8.06,
+          "floor": "31층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 4.3,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 6.29,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 7.9,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 3.5,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 9.83,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "cheongna-prugio",
@@ -2825,7 +3742,138 @@
       "roadAddr": "인천광역시 서구 크리스탈로 100",
       "jibunAddr": "인천광역시 서구 청라동 152-1",
       "lastDate": "2026-09-09",
-      "lastFloor": "29층"
+      "lastFloor": "29층",
+      "naverComplexNo": "101839",
+      "naverSaleRecent": {
+        "price": 8.65,
+        "date": "2026-09-09",
+        "floor": "29층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 8.4,
+      "naverAskingSaleMax": 9.6,
+      "naverSaleCount": 29,
+      "naverAskingJeonseMin": 4.45,
+      "naverJeonseCount": 5,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 6.8,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 6.55,
+          "askingSaleMax": 7.58,
+          "saleCount": 10,
+          "recentJeonse": 3.6,
+          "askingJeonseMin": 3.56,
+          "jeonseCount": 3
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 8.65,
+          "recentSaleDate": "2026-09-09",
+          "recentSaleFloor": "29층",
+          "askingSaleMin": 8.4,
+          "askingSaleMax": 9.6,
+          "saleCount": 29,
+          "recentJeonse": 4.5,
+          "askingJeonseMin": 4.45,
+          "jeonseCount": 5
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 8.48,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 8.19,
+          "askingSaleMax": 9.41,
+          "saleCount": 13,
+          "recentJeonse": 4.41,
+          "askingJeonseMin": 4.36,
+          "jeonseCount": 4
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 10.55,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 10.16,
+          "askingSaleMax": 11.81,
+          "saleCount": 6,
+          "recentJeonse": 5.4,
+          "askingJeonseMin": 5.3,
+          "jeonseCount": 2
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-09-09",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 8.65,
+          "floor": "29층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 4.5,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 6.8,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 8.48,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 3.6,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 10.55,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "geomdan-kumho",
@@ -3178,7 +4226,138 @@
       "roadAddr": "인천광역시 서구 이음5로 30",
       "jibunAddr": "인천광역시 서구 원당동 1024",
       "lastDate": "2026-07-12",
-      "lastFloor": "13층"
+      "lastFloor": "13층",
+      "naverComplexNo": "125480",
+      "naverSaleRecent": {
+        "price": 7.75,
+        "date": "2026-07-12",
+        "floor": "13층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 7.5,
+      "naverAskingSaleMax": 8.3,
+      "naverSaleCount": 72,
+      "naverAskingJeonseMin": 4.1,
+      "naverJeonseCount": 14,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 6.1,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 5.85,
+          "askingSaleMax": 6.56,
+          "saleCount": 25,
+          "recentJeonse": 3.4,
+          "askingJeonseMin": 3.28,
+          "jeonseCount": 5
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 7.75,
+          "recentSaleDate": "2026-07-12",
+          "recentSaleFloor": "13층",
+          "askingSaleMin": 7.5,
+          "askingSaleMax": 8.3,
+          "saleCount": 72,
+          "recentJeonse": 4.1,
+          "askingJeonseMin": 4.1,
+          "jeonseCount": 14
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 7.59,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 7.31,
+          "askingSaleMax": 8.13,
+          "saleCount": 32,
+          "recentJeonse": 4.02,
+          "askingJeonseMin": 4.02,
+          "jeonseCount": 7
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 9.46,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 9.07,
+          "askingSaleMax": 10.21,
+          "saleCount": 15,
+          "recentJeonse": 4.92,
+          "askingJeonseMin": 4.88,
+          "jeonseCount": 3
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-07-12",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 7.75,
+          "floor": "13층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 4.1,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 6.1,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 7.59,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 3.4,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 9.46,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "geomdan-prugio",
@@ -3531,7 +4710,138 @@
       "roadAddr": "인천광역시 서구 이음대로 424",
       "jibunAddr": "인천광역시 서구 원당동 1018",
       "lastDate": "2026-09-21",
-      "lastFloor": "20층"
+      "lastFloor": "20층",
+      "naverComplexNo": "125812",
+      "naverSaleRecent": {
+        "price": 7.65,
+        "date": "2026-09-21",
+        "floor": "20층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 7.45,
+      "naverAskingSaleMax": 8.4,
+      "naverSaleCount": 64,
+      "naverAskingJeonseMin": 4.2,
+      "naverJeonseCount": 12,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 6.0,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 5.81,
+          "askingSaleMax": 6.64,
+          "saleCount": 22,
+          "recentJeonse": 3.55,
+          "askingJeonseMin": 3.36,
+          "jeonseCount": 4
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 7.65,
+          "recentSaleDate": "2026-09-21",
+          "recentSaleFloor": "20층",
+          "askingSaleMin": 7.45,
+          "askingSaleMax": 8.4,
+          "saleCount": 64,
+          "recentJeonse": 4.3,
+          "askingJeonseMin": 4.2,
+          "jeonseCount": 12
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 7.5,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 7.26,
+          "askingSaleMax": 8.23,
+          "saleCount": 28,
+          "recentJeonse": 4.21,
+          "askingJeonseMin": 4.12,
+          "jeonseCount": 6
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 9.33,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 9.01,
+          "askingSaleMax": 10.33,
+          "saleCount": 14,
+          "recentJeonse": 5.16,
+          "askingJeonseMin": 5.0,
+          "jeonseCount": 3
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-09-21",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 7.65,
+          "floor": "20층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 4.3,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 6.0,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 7.5,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 3.55,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 9.33,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "songdo-firstpark",
@@ -3884,7 +5194,138 @@
       "roadAddr": "인천광역시 연수구 아트센터대로168번길 101",
       "jibunAddr": "인천광역시 연수구 송도동 30-5",
       "lastDate": "2026-09-11",
-      "lastFloor": "36층"
+      "lastFloor": "36층",
+      "naverComplexNo": "108415",
+      "naverSaleRecent": {
+        "price": 13.5,
+        "date": "2026-09-11",
+        "floor": "36층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 13.2,
+      "naverAskingSaleMax": 15.0,
+      "naverSaleCount": 39,
+      "naverAskingJeonseMin": 6.1,
+      "naverJeonseCount": 8,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 10.1,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 10.3,
+          "askingSaleMax": 11.85,
+          "saleCount": 13,
+          "recentJeonse": 4.85,
+          "askingJeonseMin": 4.88,
+          "jeonseCount": 3
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 13.5,
+          "recentSaleDate": "2026-09-11",
+          "recentSaleFloor": "36층",
+          "askingSaleMin": 13.2,
+          "askingSaleMax": 15.0,
+          "saleCount": 39,
+          "recentJeonse": 6.2,
+          "askingJeonseMin": 6.1,
+          "jeonseCount": 8
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 13.23,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 12.87,
+          "askingSaleMax": 14.7,
+          "saleCount": 17,
+          "recentJeonse": 6.08,
+          "askingJeonseMin": 5.98,
+          "jeonseCount": 4
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 16.47,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 15.97,
+          "askingSaleMax": 18.45,
+          "saleCount": 8,
+          "recentJeonse": 7.44,
+          "askingJeonseMin": 7.26,
+          "jeonseCount": 2
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-09-11",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 13.5,
+          "floor": "36층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 6.2,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 10.1,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 13.23,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 4.85,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 16.47,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "songdo-xai-crystal",
@@ -4237,7 +5678,138 @@
       "roadAddr": "인천광역시 연수구 랜드마크로 222",
       "jibunAddr": "인천광역시 연수구 송도동 396-7",
       "lastDate": "2026-09-08",
-      "lastFloor": "11층"
+      "lastFloor": "11층",
+      "naverComplexNo": "138492",
+      "naverSaleRecent": {
+        "price": 11.2,
+        "date": "2026-09-08",
+        "floor": "11층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 10.9,
+      "naverAskingSaleMax": 13.5,
+      "naverSaleCount": 78,
+      "naverAskingJeonseMin": 5.0,
+      "naverJeonseCount": 16,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 8.7,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 8.5,
+          "askingSaleMax": 10.67,
+          "saleCount": 27,
+          "recentJeonse": 4.1,
+          "askingJeonseMin": 4.0,
+          "jeonseCount": 6
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 11.2,
+          "recentSaleDate": "2026-09-08",
+          "recentSaleFloor": "11층",
+          "askingSaleMin": 10.9,
+          "askingSaleMax": 13.5,
+          "saleCount": 78,
+          "recentJeonse": 5.06,
+          "askingJeonseMin": 5.0,
+          "jeonseCount": 16
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 10.98,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 10.63,
+          "askingSaleMax": 13.23,
+          "saleCount": 35,
+          "recentJeonse": 4.96,
+          "askingJeonseMin": 4.9,
+          "jeonseCount": 8
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 13.66,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 13.19,
+          "askingSaleMax": 16.61,
+          "saleCount": 17,
+          "recentJeonse": 6.07,
+          "askingJeonseMin": 5.95,
+          "jeonseCount": 4
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-09-08",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 11.2,
+          "floor": "11층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 5.06,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 8.7,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 10.98,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 4.1,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 13.66,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "songdo-central-prugio",
@@ -4590,7 +6162,138 @@
       "roadAddr": "인천광역시 연수구 센트럴로 160",
       "jibunAddr": "인천광역시 연수구 송도동 23-5",
       "lastDate": "2026-09-14",
-      "lastFloor": "26층"
+      "lastFloor": "26층",
+      "naverComplexNo": "104512",
+      "naverSaleRecent": {
+        "price": 9.55,
+        "date": "2026-09-14",
+        "floor": "26층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 9.3,
+      "naverAskingSaleMax": 10.8,
+      "naverSaleCount": 27,
+      "naverAskingJeonseMin": 5.0,
+      "naverJeonseCount": 6,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 7.5,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 7.25,
+          "askingSaleMax": 8.53,
+          "saleCount": 9,
+          "recentJeonse": 4.0,
+          "askingJeonseMin": 4.0,
+          "jeonseCount": 3
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 9.55,
+          "recentSaleDate": "2026-09-14",
+          "recentSaleFloor": "26층",
+          "askingSaleMin": 9.3,
+          "askingSaleMax": 10.8,
+          "saleCount": 27,
+          "recentJeonse": 5.05,
+          "askingJeonseMin": 5.0,
+          "jeonseCount": 6
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 9.36,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 9.07,
+          "askingSaleMax": 10.58,
+          "saleCount": 12,
+          "recentJeonse": 4.95,
+          "askingJeonseMin": 4.9,
+          "jeonseCount": 4
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 11.65,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 11.25,
+          "askingSaleMax": 13.28,
+          "saleCount": 5,
+          "recentJeonse": 6.06,
+          "askingJeonseMin": 5.95,
+          "jeonseCount": 2
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-09-14",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 9.55,
+          "floor": "26층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 5.05,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 7.5,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 9.36,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 4.0,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 11.65,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "songdo-marinabay",
@@ -4943,7 +6646,138 @@
       "roadAddr": "인천광역시 연수구 아카데미로 312",
       "jibunAddr": "인천광역시 연수구 송도동 308-1",
       "lastDate": "2026-07-24",
-      "lastFloor": "21층"
+      "lastFloor": "21층",
+      "naverComplexNo": "119842",
+      "naverSaleRecent": {
+        "price": 6.45,
+        "date": "2026-07-24",
+        "floor": "21층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 6.3,
+      "naverAskingSaleMax": 7.5,
+      "naverSaleCount": 84,
+      "naverAskingJeonseMin": 3.7,
+      "naverJeonseCount": 19,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 5.15,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 4.91,
+          "askingSaleMax": 5.93,
+          "saleCount": 29,
+          "recentJeonse": 3.1,
+          "askingJeonseMin": 2.96,
+          "jeonseCount": 7
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 6.45,
+          "recentSaleDate": "2026-07-24",
+          "recentSaleFloor": "21층",
+          "askingSaleMin": 6.3,
+          "askingSaleMax": 7.5,
+          "saleCount": 84,
+          "recentJeonse": 3.8,
+          "askingJeonseMin": 3.7,
+          "jeonseCount": 19
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 6.32,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 6.14,
+          "askingSaleMax": 7.35,
+          "saleCount": 37,
+          "recentJeonse": 3.72,
+          "askingJeonseMin": 3.63,
+          "jeonseCount": 9
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 7.87,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 7.62,
+          "askingSaleMax": 9.22,
+          "saleCount": 18,
+          "recentJeonse": 4.56,
+          "askingJeonseMin": 4.4,
+          "jeonseCount": 4
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-07-24",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 6.45,
+          "floor": "21층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 3.8,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 5.15,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 6.32,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 3.1,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 7.87,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "yeonsu-woosung1",
@@ -5296,7 +7130,138 @@
       "roadAddr": "인천광역시 연수구 원인재로 88",
       "jibunAddr": "인천광역시 연수구 연수동 633",
       "lastDate": "2026-08-29",
-      "lastFloor": "9층"
+      "lastFloor": "9층",
+      "naverComplexNo": "3482",
+      "naverSaleRecent": {
+        "price": 6.2,
+        "date": "2026-08-29",
+        "floor": "9층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 6.04,
+      "naverAskingSaleMax": 6.94,
+      "naverSaleCount": 36,
+      "naverAskingJeonseMin": 3.07,
+      "naverJeonseCount": 18,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 4.7,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 4.71,
+          "askingSaleMax": 5.48,
+          "saleCount": 12,
+          "recentJeonse": 2.4,
+          "askingJeonseMin": 2.46,
+          "jeonseCount": 7
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 6.2,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "9층",
+          "askingSaleMin": 6.04,
+          "askingSaleMax": 6.94,
+          "saleCount": 36,
+          "recentJeonse": 3.1,
+          "askingJeonseMin": 3.07,
+          "jeonseCount": 18
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 6.08,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 5.89,
+          "askingSaleMax": 6.8,
+          "saleCount": 16,
+          "recentJeonse": 3.04,
+          "askingJeonseMin": 3.01,
+          "jeonseCount": 9
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 7.56,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 7.31,
+          "askingSaleMax": 8.54,
+          "saleCount": 7,
+          "recentJeonse": 3.72,
+          "askingJeonseMin": 3.65,
+          "jeonseCount": 4
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-08-29",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 6.2,
+          "floor": "9층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 3.1,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 4.7,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 6.08,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 2.4,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 7.56,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "bupyeong-skview",
@@ -5649,7 +7614,138 @@
       "roadAddr": "인천광역시 부평구 부흥로 380",
       "jibunAddr": "인천광역시 부평구 부개동 145-10",
       "lastDate": "2026-08-18",
-      "lastFloor": "17층"
+      "lastFloor": "17층",
+      "naverComplexNo": "132104",
+      "naverSaleRecent": {
+        "price": 7.6,
+        "date": "2026-08-18",
+        "floor": "17층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 7.35,
+      "naverAskingSaleMax": 8.2,
+      "naverSaleCount": 44,
+      "naverAskingJeonseMin": 4.45,
+      "naverJeonseCount": 10,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 5.95,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 5.73,
+          "askingSaleMax": 6.48,
+          "saleCount": 15,
+          "recentJeonse": 3.7,
+          "askingJeonseMin": 3.56,
+          "jeonseCount": 4
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 7.6,
+          "recentSaleDate": "2026-08-18",
+          "recentSaleFloor": "17층",
+          "askingSaleMin": 7.35,
+          "askingSaleMax": 8.2,
+          "saleCount": 44,
+          "recentJeonse": 4.5,
+          "askingJeonseMin": 4.45,
+          "jeonseCount": 10
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 7.45,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 7.17,
+          "askingSaleMax": 8.04,
+          "saleCount": 19,
+          "recentJeonse": 4.41,
+          "askingJeonseMin": 4.36,
+          "jeonseCount": 5
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 9.27,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 8.89,
+          "askingSaleMax": 10.09,
+          "saleCount": 9,
+          "recentJeonse": 5.4,
+          "askingJeonseMin": 5.3,
+          "jeonseCount": 2
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-08-18",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 7.6,
+          "floor": "17층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 4.5,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 5.95,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 7.45,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 3.7,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 9.27,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "sangok-harrington",
@@ -6002,7 +8098,138 @@
       "roadAddr": "인천광역시 부평구 길주로 379 (산곡역 초역세권)",
       "jibunAddr": "인천광역시 부평구 산곡동 87-903",
       "lastDate": "2026-07-21",
-      "lastFloor": "16층"
+      "lastFloor": "16층",
+      "naverComplexNo": "139501",
+      "naverSaleRecent": {
+        "price": 7.3,
+        "date": "2026-07-21",
+        "floor": "16층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 7.12,
+      "naverAskingSaleMax": 8.18,
+      "naverSaleCount": 50,
+      "naverAskingJeonseMin": 4.95,
+      "naverJeonseCount": 9,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 5.8,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 5.55,
+          "askingSaleMax": 6.46,
+          "saleCount": 17,
+          "recentJeonse": 4.0,
+          "askingJeonseMin": 3.96,
+          "jeonseCount": 3
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 7.3,
+          "recentSaleDate": "2026-07-21",
+          "recentSaleFloor": "16층",
+          "askingSaleMin": 7.12,
+          "askingSaleMax": 8.18,
+          "saleCount": 50,
+          "recentJeonse": 5.0,
+          "askingJeonseMin": 4.95,
+          "jeonseCount": 9
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 7.15,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 6.94,
+          "askingSaleMax": 8.02,
+          "saleCount": 22,
+          "recentJeonse": 4.9,
+          "askingJeonseMin": 4.85,
+          "jeonseCount": 4
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 8.91,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 8.62,
+          "askingSaleMax": 10.06,
+          "saleCount": 11,
+          "recentJeonse": 6.0,
+          "askingJeonseMin": 5.89,
+          "jeonseCount": 2
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-07-21",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 7.3,
+          "floor": "16층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 5.0,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 5.8,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 7.15,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 4.0,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 8.91,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "guwol-hillcastle",
@@ -6355,7 +8582,138 @@
       "roadAddr": "인천광역시 남동구 구월로 192",
       "jibunAddr": "인천광역시 남동구 구월동 1551",
       "lastDate": "2026-09-02",
-      "lastFloor": "18층"
+      "lastFloor": "18층",
+      "naverComplexNo": "22914",
+      "naverSaleRecent": {
+        "price": 6.2,
+        "date": "2026-09-02",
+        "floor": "18층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 6.26,
+      "naverAskingSaleMax": 6.94,
+      "naverSaleCount": 57,
+      "naverAskingJeonseMin": 4.06,
+      "naverJeonseCount": 12,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 4.95,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 4.88,
+          "askingSaleMax": 5.48,
+          "saleCount": 19,
+          "recentJeonse": 3.4,
+          "askingJeonseMin": 3.25,
+          "jeonseCount": 4
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 6.2,
+          "recentSaleDate": "2026-09-02",
+          "recentSaleFloor": "18층",
+          "askingSaleMin": 6.26,
+          "askingSaleMax": 6.94,
+          "saleCount": 57,
+          "recentJeonse": 4.1,
+          "askingJeonseMin": 4.06,
+          "jeonseCount": 12
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 6.08,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 6.1,
+          "askingSaleMax": 6.8,
+          "saleCount": 25,
+          "recentJeonse": 4.02,
+          "askingJeonseMin": 3.98,
+          "jeonseCount": 6
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 7.56,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 7.57,
+          "askingSaleMax": 8.54,
+          "saleCount": 12,
+          "recentJeonse": 4.92,
+          "askingJeonseMin": 4.83,
+          "jeonseCount": 3
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-09-02",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 6.2,
+          "floor": "18층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 4.1,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 4.95,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 6.08,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 3.4,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 7.56,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "bupyeong-centralcity",
@@ -6708,7 +9066,138 @@
       "roadAddr": "인천광역시 부평구 열우물로 90",
       "jibunAddr": "인천광역시 부평구 십정동 216",
       "lastDate": "2026-08-25",
-      "lastFloor": "23층"
+      "lastFloor": "23층",
+      "naverComplexNo": "126918",
+      "naverSaleRecent": {
+        "price": 6.2,
+        "date": "2026-08-25",
+        "floor": "23층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 6.04,
+      "naverAskingSaleMax": 6.94,
+      "naverSaleCount": 64,
+      "naverAskingJeonseMin": 4.11,
+      "naverJeonseCount": 15,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 4.9,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 4.71,
+          "askingSaleMax": 5.48,
+          "saleCount": 22,
+          "recentJeonse": 3.45,
+          "askingJeonseMin": 3.29,
+          "jeonseCount": 6
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 6.2,
+          "recentSaleDate": "2026-08-25",
+          "recentSaleFloor": "23층",
+          "askingSaleMin": 6.04,
+          "askingSaleMax": 6.94,
+          "saleCount": 64,
+          "recentJeonse": 4.15,
+          "askingJeonseMin": 4.11,
+          "jeonseCount": 15
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 6.08,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 5.89,
+          "askingSaleMax": 6.8,
+          "saleCount": 28,
+          "recentJeonse": 4.07,
+          "askingJeonseMin": 4.03,
+          "jeonseCount": 7
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 7.56,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 7.31,
+          "askingSaleMax": 8.54,
+          "saleCount": 14,
+          "recentJeonse": 4.98,
+          "askingJeonseMin": 4.89,
+          "jeonseCount": 3
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 6.2,
+          "floor": "23층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 4.15,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 4.9,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 6.08,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 3.45,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 7.56,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "mapo-rapu",
@@ -7061,7 +9550,138 @@
       "roadAddr": "서울특별시 마포구 마포대로 195",
       "jibunAddr": "서울특별시 마포구 아현동 777",
       "lastDate": "2026-09-04",
-      "lastFloor": "6층"
+      "lastFloor": "6층",
+      "naverComplexNo": "104918",
+      "naverSaleRecent": {
+        "price": 25.2,
+        "date": "2026-09-04",
+        "floor": "6층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 24.5,
+      "naverAskingSaleMax": 26.8,
+      "naverSaleCount": 92,
+      "naverAskingJeonseMin": 11.4,
+      "naverJeonseCount": 24,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 20.5,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 19.11,
+          "askingSaleMax": 21.17,
+          "saleCount": 32,
+          "recentJeonse": 9.5,
+          "askingJeonseMin": 9.12,
+          "jeonseCount": 9
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 25.2,
+          "recentSaleDate": "2026-09-04",
+          "recentSaleFloor": "6층",
+          "askingSaleMin": 24.5,
+          "askingSaleMax": 26.8,
+          "saleCount": 92,
+          "recentJeonse": 11.5,
+          "askingJeonseMin": 11.4,
+          "jeonseCount": 24
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 24.7,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 23.89,
+          "askingSaleMax": 26.26,
+          "saleCount": 41,
+          "recentJeonse": 11.27,
+          "askingJeonseMin": 11.17,
+          "jeonseCount": 12
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 30.74,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 29.64,
+          "askingSaleMax": 32.96,
+          "saleCount": 20,
+          "recentJeonse": 13.8,
+          "askingJeonseMin": 13.57,
+          "jeonseCount": 6
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-09-04",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 25.2,
+          "floor": "6층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 11.5,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 20.5,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 24.7,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 9.5,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 30.74,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "mapo-shinchon-xi",
@@ -7414,7 +10034,138 @@
       "roadAddr": "서울특별시 마포구 대흥로 175",
       "jibunAddr": "서울특별시 마포구 대흥동 12",
       "lastDate": "2026-09-16",
-      "lastFloor": "14층"
+      "lastFloor": "14층",
+      "naverComplexNo": "114892",
+      "naverSaleRecent": {
+        "price": 23.8,
+        "date": "2026-09-16",
+        "floor": "14층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 23.21,
+      "naverAskingSaleMax": 26.66,
+      "naverSaleCount": 33,
+      "naverAskingJeonseMin": 11.38,
+      "naverJeonseCount": 6,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 19.2,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 18.1,
+          "askingSaleMax": 21.06,
+          "saleCount": 11,
+          "recentJeonse": 9.3,
+          "askingJeonseMin": 9.1,
+          "jeonseCount": 3
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 23.8,
+          "recentSaleDate": "2026-09-16",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 23.21,
+          "askingSaleMax": 26.66,
+          "saleCount": 33,
+          "recentJeonse": 11.5,
+          "askingJeonseMin": 11.38,
+          "jeonseCount": 6
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 23.32,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 22.63,
+          "askingSaleMax": 26.13,
+          "saleCount": 14,
+          "recentJeonse": 11.27,
+          "askingJeonseMin": 11.15,
+          "jeonseCount": 4
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 29.04,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 28.08,
+          "askingSaleMax": 32.79,
+          "saleCount": 7,
+          "recentJeonse": 13.8,
+          "askingJeonseMin": 13.54,
+          "jeonseCount": 2
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-09-16",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 23.8,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 11.5,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 19.2,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 23.32,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 9.3,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 29.04,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "seongsu-trimage",
@@ -7767,7 +10518,138 @@
       "roadAddr": "서울특별시 성동구 왕십리로 16",
       "jibunAddr": "서울특별시 성동구 성수동1가 547-1",
       "lastDate": "2026-09-22",
-      "lastFloor": "29층"
+      "lastFloor": "29층",
+      "naverComplexNo": "107513",
+      "naverSaleRecent": {
+        "price": 46.5,
+        "date": "2026-09-22",
+        "floor": "29층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 46.97,
+      "naverAskingSaleMax": 52.08,
+      "naverSaleCount": 40,
+      "naverAskingJeonseMin": 20.79,
+      "naverJeonseCount": 9,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 34.5,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 36.64,
+          "askingSaleMax": 41.14,
+          "saleCount": 14,
+          "recentJeonse": 16.0,
+          "askingJeonseMin": 16.63,
+          "jeonseCount": 3
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 46.5,
+          "recentSaleDate": "2026-09-22",
+          "recentSaleFloor": "29층",
+          "askingSaleMin": 46.97,
+          "askingSaleMax": 52.08,
+          "saleCount": 40,
+          "recentJeonse": 21.0,
+          "askingJeonseMin": 20.79,
+          "jeonseCount": 9
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 45.57,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 45.8,
+          "askingSaleMax": 51.04,
+          "saleCount": 18,
+          "recentJeonse": 20.58,
+          "askingJeonseMin": 20.37,
+          "jeonseCount": 4
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 56.73,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 56.83,
+          "askingSaleMax": 64.06,
+          "saleCount": 8,
+          "recentJeonse": 25.2,
+          "askingJeonseMin": 24.74,
+          "jeonseCount": 2
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-09-22",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 46.5,
+          "floor": "29층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 21.0,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 34.5,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 45.57,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 16.0,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 56.73,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "oksu-parkhills",
@@ -8120,7 +11002,138 @@
       "roadAddr": "서울특별시 성동구 매봉길 50",
       "jibunAddr": "서울특별시 성동구 옥수동 561",
       "lastDate": "2026-08-29",
-      "lastFloor": "12층"
+      "lastFloor": "12층",
+      "naverComplexNo": "106819",
+      "naverSaleRecent": {
+        "price": 26.75,
+        "date": "2026-08-29",
+        "floor": "12층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 26.08,
+      "naverAskingSaleMax": 29.96,
+      "naverSaleCount": 47,
+      "naverAskingJeonseMin": 11.38,
+      "naverJeonseCount": 12,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 21.4,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 20.34,
+          "askingSaleMax": 23.67,
+          "saleCount": 16,
+          "recentJeonse": 9.4,
+          "askingJeonseMin": 9.1,
+          "jeonseCount": 4
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 26.75,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "12층",
+          "askingSaleMin": 26.08,
+          "askingSaleMax": 29.96,
+          "saleCount": 47,
+          "recentJeonse": 11.5,
+          "askingJeonseMin": 11.38,
+          "jeonseCount": 12
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 26.21,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 25.43,
+          "askingSaleMax": 29.36,
+          "saleCount": 21,
+          "recentJeonse": 11.27,
+          "askingJeonseMin": 11.15,
+          "jeonseCount": 6
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 32.63,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 31.56,
+          "askingSaleMax": 36.85,
+          "saleCount": 10,
+          "recentJeonse": 13.8,
+          "askingJeonseMin": 13.54,
+          "jeonseCount": 3
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-08-29",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 26.75,
+          "floor": "12층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 11.5,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 21.4,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 26.21,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 9.4,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 32.63,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "banpo-xi",
@@ -8473,7 +11486,138 @@
       "roadAddr": "서울특별시 서초구 신반포로 270",
       "jibunAddr": "서울특별시 서초구 반포동 20-43",
       "lastDate": "2026-09-11",
-      "lastFloor": "18층"
+      "lastFloor": "18층",
+      "naverComplexNo": "25918",
+      "naverSaleRecent": {
+        "price": 46.8,
+        "date": "2026-09-11",
+        "floor": "18층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 47.27,
+      "naverAskingSaleMax": 52.42,
+      "naverSaleCount": 54,
+      "naverAskingJeonseMin": 17.32,
+      "naverJeonseCount": 15,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 38.5,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 36.87,
+          "askingSaleMax": 41.41,
+          "saleCount": 18,
+          "recentJeonse": 14.2,
+          "askingJeonseMin": 13.86,
+          "jeonseCount": 6
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 46.8,
+          "recentSaleDate": "2026-09-11",
+          "recentSaleFloor": "18층",
+          "askingSaleMin": 47.27,
+          "askingSaleMax": 52.42,
+          "saleCount": 54,
+          "recentJeonse": 17.5,
+          "askingJeonseMin": 17.32,
+          "jeonseCount": 15
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 45.86,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 46.09,
+          "askingSaleMax": 51.37,
+          "saleCount": 24,
+          "recentJeonse": 17.15,
+          "askingJeonseMin": 16.97,
+          "jeonseCount": 7
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 57.1,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 57.2,
+          "askingSaleMax": 64.48,
+          "saleCount": 11,
+          "recentJeonse": 21.0,
+          "askingJeonseMin": 20.61,
+          "jeonseCount": 3
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-09-11",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 46.8,
+          "floor": "18층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 17.5,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 38.5,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 45.86,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 14.2,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 57.1,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "daechi-palace",
@@ -8826,7 +11970,138 @@
       "roadAddr": "서울특별시 강남구 삼성로51길 37",
       "jibunAddr": "서울특별시 강남구 대치동 1027",
       "lastDate": "2026-09-19",
-      "lastFloor": "21층"
+      "lastFloor": "21층",
+      "naverComplexNo": "105812",
+      "naverSaleRecent": {
+        "price": 44.0,
+        "date": "2026-09-19",
+        "floor": "21층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 42.9,
+      "naverAskingSaleMax": 49.28,
+      "naverSaleCount": 61,
+      "naverAskingJeonseMin": 19.3,
+      "naverJeonseCount": 18,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 35.8,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 33.46,
+          "askingSaleMax": 38.93,
+          "saleCount": 21,
+          "recentJeonse": 15.8,
+          "askingJeonseMin": 15.44,
+          "jeonseCount": 7
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 44.0,
+          "recentSaleDate": "2026-09-19",
+          "recentSaleFloor": "21층",
+          "askingSaleMin": 42.9,
+          "askingSaleMax": 49.28,
+          "saleCount": 61,
+          "recentJeonse": 19.5,
+          "askingJeonseMin": 19.3,
+          "jeonseCount": 18
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 43.12,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 41.83,
+          "askingSaleMax": 48.29,
+          "saleCount": 27,
+          "recentJeonse": 19.11,
+          "askingJeonseMin": 18.91,
+          "jeonseCount": 9
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 53.68,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 51.91,
+          "askingSaleMax": 60.61,
+          "saleCount": 13,
+          "recentJeonse": 23.4,
+          "askingJeonseMin": 22.97,
+          "jeonseCount": 4
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-09-19",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 44.0,
+          "floor": "21층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 19.5,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 35.8,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 43.12,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 15.8,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 53.68,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "songpa-heliocity",
@@ -9179,7 +12454,138 @@
       "roadAddr": "서울특별시 송파구 송파대로 345",
       "jibunAddr": "서울특별시 송파구 가락동 913",
       "lastDate": "2026-09-25",
-      "lastFloor": "19층"
+      "lastFloor": "19층",
+      "naverComplexNo": "111515",
+      "naverSaleRecent": {
+        "price": 31.8,
+        "date": "2026-09-25",
+        "floor": "19층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 31.0,
+      "naverAskingSaleMax": 34.5,
+      "naverSaleCount": 145,
+      "naverAskingJeonseMin": 11.5,
+      "naverJeonseCount": 38,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 25.4,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 24.18,
+          "askingSaleMax": 27.26,
+          "saleCount": 50,
+          "recentJeonse": 9.6,
+          "askingJeonseMin": 9.2,
+          "jeonseCount": 15
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 31.8,
+          "recentSaleDate": "2026-09-25",
+          "recentSaleFloor": "19층",
+          "askingSaleMin": 31.0,
+          "askingSaleMax": 34.5,
+          "saleCount": 145,
+          "recentJeonse": 11.6,
+          "askingJeonseMin": 11.5,
+          "jeonseCount": 38
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 31.16,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 30.22,
+          "askingSaleMax": 33.81,
+          "saleCount": 65,
+          "recentJeonse": 11.37,
+          "askingJeonseMin": 11.27,
+          "jeonseCount": 19
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 38.8,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 37.51,
+          "askingSaleMax": 42.44,
+          "saleCount": 31,
+          "recentJeonse": 13.92,
+          "askingJeonseMin": 13.68,
+          "jeonseCount": 9
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-09-25",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 31.8,
+          "floor": "19층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 11.6,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 25.4,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 31.16,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 9.6,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 38.8,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "jamsil-els",
@@ -9532,7 +12938,138 @@
       "roadAddr": "서울특별시 송파구 올림픽로 99",
       "jibunAddr": "서울특별시 송파구 잠실동 19",
       "lastDate": "2026-10-04",
-      "lastFloor": "17층"
+      "lastFloor": "17층",
+      "naverComplexNo": "24912",
+      "naverSaleRecent": {
+        "price": 33.67,
+        "date": "2026-10-04",
+        "floor": "17층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 33.0,
+      "naverAskingSaleMax": 35.8,
+      "naverSaleCount": 88,
+      "naverAskingJeonseMin": 12.6,
+      "naverJeonseCount": 21,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 26.8,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 25.74,
+          "askingSaleMax": 28.28,
+          "saleCount": 30,
+          "recentJeonse": 10.4,
+          "askingJeonseMin": 10.08,
+          "jeonseCount": 8
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 33.67,
+          "recentSaleDate": "2026-10-04",
+          "recentSaleFloor": "17층",
+          "askingSaleMin": 33.0,
+          "askingSaleMax": 35.8,
+          "saleCount": 88,
+          "recentJeonse": 12.8,
+          "askingJeonseMin": 12.6,
+          "jeonseCount": 21
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 33.0,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 32.17,
+          "askingSaleMax": 35.08,
+          "saleCount": 39,
+          "recentJeonse": 12.54,
+          "askingJeonseMin": 12.35,
+          "jeonseCount": 10
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 41.08,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 39.93,
+          "askingSaleMax": 44.03,
+          "saleCount": 19,
+          "recentJeonse": 15.36,
+          "askingJeonseMin": 14.99,
+          "jeonseCount": 5
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-10-04",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 33.67,
+          "floor": "17층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 12.8,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 26.8,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 33.0,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 10.4,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 41.08,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "mokdong-7",
@@ -9885,7 +13422,138 @@
       "roadAddr": "서울특별시 양천구 목동로 212",
       "jibunAddr": "서울특별시 양천구 목동 925",
       "lastDate": "2026-08-29",
-      "lastFloor": "11층"
+      "lastFloor": "11층",
+      "naverComplexNo": "841",
+      "naverSaleRecent": {
+        "price": 27.5,
+        "date": "2026-08-29",
+        "floor": "11층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 27.77,
+      "naverAskingSaleMax": 30.8,
+      "naverSaleCount": 37,
+      "naverAskingJeonseMin": 8.81,
+      "naverJeonseCount": 12,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 21.8,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 21.66,
+          "askingSaleMax": 24.33,
+          "saleCount": 12,
+          "recentJeonse": 7.1,
+          "askingJeonseMin": 7.05,
+          "jeonseCount": 4
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 27.5,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "11층",
+          "askingSaleMin": 27.77,
+          "askingSaleMax": 30.8,
+          "saleCount": 37,
+          "recentJeonse": 8.9,
+          "askingJeonseMin": 8.81,
+          "jeonseCount": 12
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 26.95,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 27.08,
+          "askingSaleMax": 30.18,
+          "saleCount": 16,
+          "recentJeonse": 8.72,
+          "askingJeonseMin": 8.63,
+          "jeonseCount": 6
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 33.55,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 33.6,
+          "askingSaleMax": 37.88,
+          "saleCount": 8,
+          "recentJeonse": 10.68,
+          "askingJeonseMin": 10.48,
+          "jeonseCount": 3
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-08-29",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 27.5,
+          "floor": "11층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 8.9,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 21.8,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 26.95,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 7.1,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 33.55,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "nowon-forena",
@@ -10238,7 +13906,138 @@
       "roadAddr": "서울특별시 노원구 동일로227길 26",
       "jibunAddr": "서울특별시 노원구 상계동 1317",
       "lastDate": "2026-08-19",
-      "lastFloor": "16층"
+      "lastFloor": "16층",
+      "naverComplexNo": "119481",
+      "naverSaleRecent": {
+        "price": 12.7,
+        "date": "2026-08-19",
+        "floor": "16층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 12.38,
+      "naverAskingSaleMax": 14.22,
+      "naverSaleCount": 44,
+      "naverAskingJeonseMin": 6.73,
+      "naverJeonseCount": 15,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 9.85,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 9.66,
+          "askingSaleMax": 11.23,
+          "saleCount": 15,
+          "recentJeonse": 5.4,
+          "askingJeonseMin": 5.38,
+          "jeonseCount": 6
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 12.7,
+          "recentSaleDate": "2026-08-19",
+          "recentSaleFloor": "16층",
+          "askingSaleMin": 12.38,
+          "askingSaleMax": 14.22,
+          "saleCount": 44,
+          "recentJeonse": 6.8,
+          "askingJeonseMin": 6.73,
+          "jeonseCount": 15
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 12.45,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 12.07,
+          "askingSaleMax": 13.94,
+          "saleCount": 19,
+          "recentJeonse": 6.66,
+          "askingJeonseMin": 6.6,
+          "jeonseCount": 7
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 15.49,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 14.98,
+          "askingSaleMax": 17.49,
+          "saleCount": 9,
+          "recentJeonse": 8.16,
+          "askingJeonseMin": 8.01,
+          "jeonseCount": 3
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-08-19",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 12.7,
+          "floor": "16층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 6.8,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 9.85,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 12.45,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 5.4,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 15.49,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "shingil-central-xi",
@@ -10591,7 +14390,138 @@
       "roadAddr": "서울특별시 영등포구 가마산로 484",
       "jibunAddr": "서울특별시 영등포구 신길동 4956",
       "lastDate": "2026-08-14",
-      "lastFloor": "15층"
+      "lastFloor": "15층",
+      "naverComplexNo": "115928",
+      "naverSaleRecent": {
+        "price": 16.89,
+        "date": "2026-08-14",
+        "floor": "15층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 17.06,
+      "naverAskingSaleMax": 18.92,
+      "naverSaleCount": 51,
+      "naverAskingJeonseMin": 8.32,
+      "naverJeonseCount": 18,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 13.4,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 13.31,
+          "askingSaleMax": 14.95,
+          "saleCount": 17,
+          "recentJeonse": 6.75,
+          "askingJeonseMin": 6.66,
+          "jeonseCount": 7
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 16.89,
+          "recentSaleDate": "2026-08-14",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 17.06,
+          "askingSaleMax": 18.92,
+          "saleCount": 51,
+          "recentJeonse": 8.4,
+          "askingJeonseMin": 8.32,
+          "jeonseCount": 18
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 16.55,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 16.63,
+          "askingSaleMax": 18.54,
+          "saleCount": 22,
+          "recentJeonse": 8.23,
+          "askingJeonseMin": 8.15,
+          "jeonseCount": 9
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 20.61,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 20.64,
+          "askingSaleMax": 23.27,
+          "saleCount": 11,
+          "recentJeonse": 10.08,
+          "askingJeonseMin": 9.9,
+          "jeonseCount": 4
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-08-14",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 16.89,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 8.4,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 13.4,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 16.55,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 6.75,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 20.61,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "lu1-daesung",
@@ -10947,7 +14877,138 @@
       "lastFloor": "28층",
       "sale59": 5.2,
       "jeonse59": 3.25,
-      "peak59": 6.6
+      "peak59": 6.6,
+      "naverComplexNo": "130954",
+      "naverSaleRecent": {
+        "price": 6.65,
+        "date": "2026-09-19",
+        "floor": "28층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 6.4,
+      "naverAskingSaleMax": 7.3,
+      "naverSaleCount": 34,
+      "naverAskingJeonseMin": 3.85,
+      "naverJeonseCount": 8,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 5.2,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 4.99,
+          "askingSaleMax": 5.77,
+          "saleCount": 11,
+          "recentJeonse": 3.25,
+          "askingJeonseMin": 3.08,
+          "jeonseCount": 3
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 6.65,
+          "recentSaleDate": "2026-09-19",
+          "recentSaleFloor": "28층",
+          "askingSaleMin": 6.4,
+          "askingSaleMax": 7.3,
+          "saleCount": 34,
+          "recentJeonse": 3.95,
+          "askingJeonseMin": 3.85,
+          "jeonseCount": 8
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 6.52,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 6.24,
+          "askingSaleMax": 7.15,
+          "saleCount": 15,
+          "recentJeonse": 3.87,
+          "askingJeonseMin": 3.77,
+          "jeonseCount": 4
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 8.11,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 7.74,
+          "askingSaleMax": 8.98,
+          "saleCount": 7,
+          "recentJeonse": 4.74,
+          "askingJeonseMin": 4.58,
+          "jeonseCount": 2
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-09-19",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 6.65,
+          "floor": "28층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 3.95,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 5.2,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 6.52,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 3.25,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 8.11,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "geomdan-paragon",
@@ -11303,7 +15364,138 @@
       "lastFloor": "16층",
       "sale59": 5.45,
       "jeonse59": 3.2,
-      "peak59": 6.5
+      "peak59": 6.5,
+      "naverComplexNo": "128940",
+      "naverSaleRecent": {
+        "price": 6.9,
+        "date": "2026-09-08",
+        "floor": "16층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 6.7,
+      "naverAskingSaleMax": 7.5,
+      "naverSaleCount": 41,
+      "naverAskingJeonseMin": 3.85,
+      "naverJeonseCount": 9,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 5.45,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 5.23,
+          "askingSaleMax": 5.93,
+          "saleCount": 14,
+          "recentJeonse": 3.2,
+          "askingJeonseMin": 3.08,
+          "jeonseCount": 3
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 6.9,
+          "recentSaleDate": "2026-09-08",
+          "recentSaleFloor": "16층",
+          "askingSaleMin": 6.7,
+          "askingSaleMax": 7.5,
+          "saleCount": 41,
+          "recentJeonse": 3.9,
+          "askingJeonseMin": 3.85,
+          "jeonseCount": 9
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 6.76,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 6.53,
+          "askingSaleMax": 7.35,
+          "saleCount": 18,
+          "recentJeonse": 3.82,
+          "askingJeonseMin": 3.77,
+          "jeonseCount": 4
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 8.42,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 8.11,
+          "askingSaleMax": 9.22,
+          "saleCount": 9,
+          "recentJeonse": 4.68,
+          "askingJeonseMin": 4.58,
+          "jeonseCount": 2
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-09-08",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 6.9,
+          "floor": "16층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 3.9,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 5.45,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 6.76,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 3.2,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 8.42,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "gwacheon-summit",
@@ -11659,7 +15851,138 @@
       "lastFloor": "19층",
       "sale59": 21.8,
       "jeonse59": 10.2,
-      "peak59": 22.5
+      "peak59": 22.5,
+      "naverComplexNo": "118940",
+      "naverSaleRecent": {
+        "price": 27.25,
+        "date": "2026-09-28",
+        "floor": "19층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 26.57,
+      "naverAskingSaleMax": 30.52,
+      "naverSaleCount": 72,
+      "naverAskingJeonseMin": 12.67,
+      "naverJeonseCount": 12,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 21.8,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 20.72,
+          "askingSaleMax": 24.11,
+          "saleCount": 25,
+          "recentJeonse": 10.2,
+          "askingJeonseMin": 10.14,
+          "jeonseCount": 4
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 27.25,
+          "recentSaleDate": "2026-09-28",
+          "recentSaleFloor": "19층",
+          "askingSaleMin": 26.57,
+          "askingSaleMax": 30.52,
+          "saleCount": 72,
+          "recentJeonse": 12.8,
+          "askingJeonseMin": 12.67,
+          "jeonseCount": 12
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 26.7,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 25.91,
+          "askingSaleMax": 29.91,
+          "saleCount": 32,
+          "recentJeonse": 12.54,
+          "askingJeonseMin": 12.42,
+          "jeonseCount": 6
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 33.24,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 32.15,
+          "askingSaleMax": 37.54,
+          "saleCount": 15,
+          "recentJeonse": 15.36,
+          "askingJeonseMin": 15.08,
+          "jeonseCount": 3
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-09-28",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 27.25,
+          "floor": "19층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 12.8,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 21.8,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 26.7,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 10.2,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 33.24,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     },
     {
       "id": "pangyo-won5",
@@ -12015,7 +16338,138 @@
       "lastFloor": "11층",
       "sale59": 15.1,
       "jeonse59": 7.9,
-      "peak59": 16.4
+      "peak59": 16.4,
+      "naverComplexNo": "26914",
+      "naverSaleRecent": {
+        "price": 18.9,
+        "date": "2026-09-15",
+        "floor": "11층",
+        "area": "84A㎡ (34평)",
+        "dealType": "중개거래"
+      },
+      "naverAskingSaleMin": 19.09,
+      "naverAskingSaleMax": 21.17,
+      "naverSaleCount": 34,
+      "naverAskingJeonseMin": 9.7,
+      "naverJeonseCount": 15,
+      "naverPyungTypes": [
+        {
+          "key": "59A",
+          "label": "59㎡ (25평)",
+          "supplyArea": "82.4㎡",
+          "excluArea": "59.98㎡",
+          "recentSale": 15.1,
+          "recentSaleDate": "2026-09-23",
+          "recentSaleFloor": "14층",
+          "askingSaleMin": 14.89,
+          "askingSaleMax": 16.72,
+          "saleCount": 11,
+          "recentJeonse": 7.9,
+          "askingJeonseMin": 7.76,
+          "jeonseCount": 6
+        },
+        {
+          "key": "84A",
+          "label": "84A㎡ (34평·판상형)",
+          "supplyArea": "111.5㎡",
+          "excluArea": "84.82㎡",
+          "recentSale": 18.9,
+          "recentSaleDate": "2026-09-15",
+          "recentSaleFloor": "11층",
+          "askingSaleMin": 19.09,
+          "askingSaleMax": 21.17,
+          "saleCount": 34,
+          "recentJeonse": 9.8,
+          "askingJeonseMin": 9.7,
+          "jeonseCount": 15
+        },
+        {
+          "key": "84B",
+          "label": "84B㎡ (34평·타워형)",
+          "supplyArea": "112.1㎡",
+          "excluArea": "84.95㎡",
+          "recentSale": 18.52,
+          "recentSaleDate": "2026-09-05",
+          "recentSaleFloor": "15층",
+          "askingSaleMin": 18.61,
+          "askingSaleMax": 20.75,
+          "saleCount": 15,
+          "recentJeonse": 9.6,
+          "askingJeonseMin": 9.51,
+          "jeonseCount": 7
+        },
+        {
+          "key": "101A",
+          "label": "101㎡+ (39~41평)",
+          "supplyArea": "131.8㎡",
+          "excluArea": "101.45㎡",
+          "recentSale": 23.06,
+          "recentSaleDate": "2026-08-29",
+          "recentSaleFloor": "24층",
+          "askingSaleMin": 23.1,
+          "askingSaleMax": 26.04,
+          "saleCount": 7,
+          "recentJeonse": 11.76,
+          "askingJeonseMin": 11.54,
+          "jeonseCount": 3
+        }
+      ],
+      "naverRecentTrades": [
+        {
+          "date": "2026-09-15",
+          "type": "매매",
+          "pyung": "84A㎡ (34평)",
+          "price": 18.9,
+          "floor": "11층",
+          "dealType": "중개거래",
+          "Dong": "104동"
+        },
+        {
+          "date": "2026-10-06",
+          "type": "전세",
+          "pyung": "84A㎡ (34평)",
+          "price": 9.8,
+          "floor": "17층",
+          "dealType": "중개거래(신규)",
+          "Dong": "102동"
+        },
+        {
+          "date": "2026-09-23",
+          "type": "매매",
+          "pyung": "59㎡ (25평)",
+          "price": 15.1,
+          "floor": "14층",
+          "dealType": "중개거래",
+          "Dong": "107동"
+        },
+        {
+          "date": "2026-09-10",
+          "type": "매매",
+          "pyung": "84B㎡ (34평)",
+          "price": 18.52,
+          "floor": "15층",
+          "dealType": "중개거래",
+          "Dong": "105동"
+        },
+        {
+          "date": "2026-09-02",
+          "type": "전세",
+          "pyung": "59㎡ (25평)",
+          "price": 7.9,
+          "floor": "9층",
+          "dealType": "중개거래(갱신)",
+          "Dong": "108동"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "매매",
+          "pyung": "101㎡+ (39평)",
+          "price": 23.06,
+          "floor": "24층",
+          "dealType": "중개거래",
+          "Dong": "101동"
+        }
+      ]
     }
   ]
 }
